@@ -1,0 +1,156 @@
+.page-chakli {
+  --chakli-charcoal: #403e41;
+  --chakli-orange: #db7231;
+  --chakli-paper: #eeede9;
+}
+
+.chakli-back {
+  display: block;
+  max-width: 1200px;
+  margin: 26px auto 12px;
+  padding-left: 32px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.chakli-back span { margin-right: 7px; font-size: 20px; vertical-align: -1px; }
+.chakli-case { width: min(1200px, calc(100% - 80px)); margin: 0 auto; }
+.chakli-section { padding: 80px 96px; }
+.chakli-section h1, .chakli-section h2, .chakli-section h3, .chakli-section p { margin-top: 0; }
+.chakli-section h2 { margin-bottom: 36px; font-size: 43px; font-weight: 800; line-height: 1.12; letter-spacing: -.025em; }
+.chakli-section p { font-size: 16px; line-height: 1.52; }
+.chakli-eyebrow { margin-bottom: 24px; color: var(--chakli-orange); font-size: 12px !important; font-weight: 800; letter-spacing: .13em; line-height: 1.4 !important; text-transform: uppercase; }
+.dark-section { background: var(--chakli-charcoal); color: #fff; }
+.dark-section .chakli-eyebrow { color: #f2a477; }
+.gray-section { background: var(--chakli-paper); color: #292729; }
+.white-section { background: #fff; color: #292729; }
+.orange-section { background: var(--chakli-orange); color: #fff; }
+.orange-section .chakli-eyebrow { color: #fff; }
+.three-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.four-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.five-cols { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.two-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+
+.chakli-hero { padding-top: 70px; padding-bottom: 78px; }
+.chakli-hero .chakli-eyebrow { margin-bottom: 22px; }
+.chakli-hero h1 { margin-bottom: 20px; font-size: 67px; font-weight: 800; line-height: 1.07; letter-spacing: -.035em; }
+.chakli-hero-subtitle { margin-bottom: 34px; color: #d2cfd0; font-size: 20px !important; }
+.chakli-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0 0 34px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.17); }
+.chakli-meta dt { margin-bottom: 7px; color: #f2a477; font-size: 12px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.chakli-meta dd { margin: 0; color: #f5f2f1; font-size: 14px; line-height: 1.48; }
+.chakli-hero-image { display: block; width: 100%; aspect-ratio: 1.86; border-radius: 11px; object-fit: cover; }
+.chakli-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.chakli-tags span { padding: 5px 12px; border-radius: 20px; background: var(--chakli-orange); color: #fff; font-size: 11px; font-weight: 800; }
+.chakli-tags span:last-child { background: #555356; }
+
+.chakli-overview { padding-top: 64px; padding-bottom: 65px; }
+.chakli-overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 35px; }
+.chakli-overview-grid > div { border-top: 3px solid var(--chakli-orange); padding-top: 16px; }
+.chakli-overview h2 { margin-bottom: 10px; font-size: 21px; letter-spacing: 0; }
+.chakli-overview p { margin-bottom: 0; }
+
+.chakli-why { display: grid; grid-template-columns: 44% 1fr; align-items: center; gap: 55px; padding-top: 86px; padding-bottom: 86px; }
+.chakli-why > img { display: block; width: 100%; border: 1px dashed #edab80; border-radius: 10px; }
+.chakli-why h2 { margin-bottom: 22px; }
+.chakli-why p:not(.chakli-eyebrow) { margin-bottom: 22px; }
+.chakli-why blockquote { margin: 0; padding-left: 16px; border-left: 3px solid var(--chakli-orange); color: var(--chakli-orange); font-size: 24px; line-height: 1.3; }
+.chakli-why cite { display: block; margin-top: 8px; color: #837b77; font-size: 13px; font-style: normal; }
+
+.chakli-stat-grid { margin: 0 0 22px; }
+.chakli-stat { min-height: 130px; padding: 20px 24px; border-radius: 16px; background: #fff; }
+.chakli-stat strong { display: block; color: var(--chakli-orange); font-size: 47px; font-weight: 800; line-height: 1.05; }
+.chakli-stat p { margin: 6px 0 0; font-size: 15px; }
+.chakli-source { margin-bottom: 30px; color: #807b79; font-size: 12px !important; }
+.chakli-research-grid figure, .chakli-concepts figure, .chakli-steps figure, .chakli-impact-grid figure { margin: 0; }
+.chakli-research-grid figure { padding: 12px 12px 19px; border-radius: 17px; background: #fff; }
+.chakli-research-grid img { display: block; width: 100%; aspect-ratio: 1.45; border-radius: 10px; object-fit: cover; }
+.chakli-research-grid figcaption { display: block; padding: 12px 6px 0; }
+.chakli-research-grid figcaption strong, .chakli-concepts figcaption strong, .chakli-impact-grid figcaption strong { display: block; margin-bottom: 6px; color: var(--chakli-orange); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.chakli-research-grid figcaption span, .chakli-concepts figcaption span, .chakli-impact-grid figcaption span { display: block; font-size: 14px; line-height: 1.5; }
+
+.chakli-product-strip { display: block; width: 100%; margin: 40px 0 34px; border: 1px dashed #eca778; border-radius: 12px; }
+.chakli-table-wrap { overflow: hidden; border: 1px solid #d9d6d1; border-radius: 13px; }
+.chakli-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; text-align: center; }
+.chakli-table thead { background: var(--chakli-charcoal); color: #fff; }
+.chakli-table th, .chakli-table td { padding: 14px 10px; }
+.chakli-table thead th { font-size: 12px; font-weight: 700; }
+.chakli-table tbody tr + tr { border-top: 1px solid #dfddd8; }
+.chakli-table tbody th { font-weight: 800; text-align: left; }
+.chakli-table tbody td { color: #77716e; }
+.chakli-section p.chakli-conclusion { margin: 42px 0 0; font-weight: 700; }
+
+.chakli-audit-grid { margin-top: 40px; }
+.chakli-audit-grid > div { min-height: 247px; padding: 20px; border: 1px solid #686569; border-radius: 16px; background: #4c4a4d; }
+.chakli-audit-grid h3 { margin-bottom: 8px; color: #d4d1d0; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.chakli-audit-grid strong { display: block; color: var(--chakli-orange); font-size: 69px; font-weight: 800; line-height: 1.05; }
+.chakli-audit-grid em { display: inline-block; margin: 8px 0 10px; padding: 5px 10px; border-radius: 20px; background: var(--chakli-orange); font-size: 11px; font-style: normal; font-weight: 800; }
+.chakli-audit-grid em.muted-tag { background: #676568; }
+.chakli-audit-grid p { margin-bottom: 0; color: #cecacb; font-size: 12px; }
+.chakli-audit-foot { display: grid; grid-template-columns: 32% 1fr; align-items: center; gap: 18px; margin-top: 38px; }
+.chakli-audit-foot img { display: block; width: 100%; border-radius: 10px; }
+.chakli-audit-foot p { margin: 0; color: #c8c5c6; font-size: 14px; }
+
+.orange-section { padding-top: 72px; padding-bottom: 72px; }
+.orange-section h2 { margin-bottom: 40px; }
+.chakli-rules { margin: 0; padding: 0; list-style: none; row-gap: 0; }
+.chakli-rules li { min-height: 118px; padding: 22px 6px 20px 0; border-top: 1px solid rgba(255,255,255,.34); font-size: 20px; line-height: 1.25; }
+.chakli-rules li span { display: block; margin-bottom: 9px; color: rgba(255,255,255,.8); font-size: 16px; }
+
+.chakli-idea-heading { display: flex; align-items: end; justify-content: space-between; gap: 45px; }
+.chakli-idea-heading h2 { margin-bottom: 28px; }
+.chakli-idea-heading p { max-width: 400px; margin-bottom: 31px; }
+.chakli-sketch-sheet { display: block; width: 100%; border: 1px dashed #edaa7d; border-radius: 10px; background: #fff; }
+.chakli-concepts { margin-top: 36px; }
+.chakli-concepts figure { padding: 10px 9px 20px; border-radius: 13px; background: #fff; }
+.chakli-concepts img { display: block; width: 100%; aspect-ratio: 1.2; border: 1px dashed #edaa7d; border-radius: 10px; object-fit: contain; }
+.chakli-concepts figcaption { padding: 9px 4px 0; }
+.chakli-concepts figcaption strong { margin-bottom: 4px; }
+.chakli-concepts figcaption span { font-size: 12px; }
+
+.chakli-equation { display: grid; grid-template-columns: minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr); align-items: center; gap: 12px; margin: 32px 0 38px; }
+.chakli-equation img { display: block; width: 100%; aspect-ratio: 1.15; border: 1px dashed #edaa7d; border-radius: 11px; object-fit: contain; }
+.chakli-equation img:last-child { border: 2px solid var(--chakli-orange); }
+.chakli-equation span { color: var(--chakli-orange); font-size: 31px; font-weight: 800; text-align: center; }
+
+.chakli-final-image { display: block; width: 100%; margin: 36px 0 35px; border: 1px dashed #b47450; border-radius: 11px; }
+.chakli-feature-grid > div { padding-top: 17px; border-top: 2px solid var(--chakli-orange); }
+.chakli-feature-grid h3 { margin-bottom: 8px; font-size: 16px; }
+.chakli-feature-grid p { margin: 0; color: #ccc8c9; font-size: 13px; }
+.chakli-mini-heading { margin: 36px 0 17px !important; color: #efa379; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.chakli-steps img { display: block; width: 100%; aspect-ratio: 1.35; border: 1px dashed #b47450; border-radius: 10px; object-fit: cover; }
+.chakli-steps figcaption { padding-top: 8px; font-size: 14px; }
+
+.chakli-impact-grid { margin-top: 36px; }
+.chakli-impact-grid figure { padding: 11px 11px 18px; border-radius: 16px; background: #fff; }
+.chakli-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.chakli-pair img { display: block; width: 100%; aspect-ratio: .8; border-radius: 10px; object-fit: cover; }
+.chakli-impact-grid figcaption { padding: 10px 7px 0; }
+.chakli-projections { margin-top: 34px; }
+.chakli-projections > div { padding: 22px; border-radius: 16px; background: #fff; }
+.chakli-projections h3 { margin-bottom: 8px; color: var(--chakli-orange); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.chakli-projections strong { display: block; font-size: 48px; line-height: 1.1; }
+.chakli-projections p { margin: 8px 0 0; color: #807b79; font-size: 13px; }
+
+.chakli-reflections > div { min-height: 240px; padding: 24px; border-radius: 16px; background: var(--chakli-paper); }
+.chakli-reflections > div:first-child { background: #f5dfd1; }
+.chakli-reflections h3 { margin-bottom: 14px; font-size: 19px; }
+.chakli-reflections > div:first-child h3 { color: var(--chakli-orange); }
+.chakli-reflections p { margin-bottom: 14px; font-size: 14px; }
+
+.chakli-next { display: flex; flex-direction: column; align-items: center; gap: 25px; padding: 80px 20px 90px; }
+.chakli-next > p { margin: 0; color: var(--green-light); font-family: var(--display-font); font-size: 14px; }
+.chakli-next-card { display: grid; grid-template-columns: 240px 1fr; width: min(680px, 100%); overflow: hidden; border: 1px solid var(--green-pale); border-radius: 16px; background: #fff; text-decoration: none; }
+.chakli-next-card > img { display: block; width: 100%; height: 100%; min-height: 155px; object-fit: cover; }
+.chakli-next-card > span { display: flex; flex-direction: column; justify-content: center; gap: 11px; padding: 22px; }
+.chakli-next-card small { color: var(--pink); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.chakli-next-card strong { font-size: 19px; line-height: 1.22; }
+.chakli-next-card b, .chakli-all-projects { color: var(--green); font-size: 14px; font-weight: 800; text-decoration: none; }
+.chakli-all-projects { font-size: 19px; }
+
+@media (max-width: 1100px) {
+  .chakli-case { width: min(1200px, calc(100% - 32px)); }
+  .chakli-section { padding-left: 48px; padding-right: 48px; }
+  .chakli-hero h1 { font-size: 56px; }
+  .chakli-section h2 { font-size: 38px; }
+}

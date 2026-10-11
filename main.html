@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FDFDF5">
+    <meta name="description" content="Khushna Kazi is a UX designer making thoughtful experiences, from research to the details that make them feel just right.">
+    <title>Khushna Kazi — UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="page-home">
+    <header class="site-header">
+      <a class="brand" href="main.html" aria-label="Khushna Kazi, home">
+        <img src="Assets/logo.png" alt="" width="920" height="1080">
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link is-current" href="main.html" aria-current="page">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="#about" data-scroll-to="about">About Me</a>
+        <a class="contact-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khushna.kazi%40gmail.com" target="_blank" rel="noopener noreferrer">Contact Me <img src="Assets/strawberry.png" alt="" width="268" height="387"></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero reveal-scope" id="home" data-reveal aria-labelledby="hero-title">
+        <p class="hero-intro reveal-from-top"><span>Hello, I'm Khushna Kazi,</span> a UX Designer</p>
+        <h1 class="visually-hidden" id="hero-title">Making things, noticing things, probably overthinking things</h1>
+        <img class="hero-art reveal-from-top" src="Assets/cloud_hero.png" alt="" width="4834" height="2203" fetchpriority="high">
+        <img class="star hero-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s">
+        <img class="star hero-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s">
+        <img class="star hero-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s">
+        <img class="star hero-star star-4" src="Assets/star.png" alt="" style="--star-delay:1.48s">
+        <img class="star hero-star star-5" src="Assets/star.png" alt="" style="--star-delay:1.78s">
+      </section>
+
+      <section class="featured-projects reveal-scope" id="featured-projects" data-reveal aria-labelledby="featured-title">
+        <h2 class="visually-hidden" id="featured-title">Featured projects</h2>
+        <img class="star feature-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s" loading="lazy">
+        <img class="star feature-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s" loading="lazy">
+        <img class="star feature-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s" loading="lazy">
+        <p class="book-hint"><span>Click on the right side to flip the page!</span><img src="Assets/arrow.png" alt="" width="127" height="126"></p>
+
+        <div class="book-stage reveal-from-top" data-book aria-label="Featured project scrapbook">
+          <div class="book-spine" aria-hidden="true"></div>
+          <div class="book-pages">
+            <article class="project-page is-active" data-project-page="0" aria-label="Selective Mutism project preview">
+              <img src="Assets/web/sm.jpg" alt="Scrapbook preview of a low-pressure communication tool for children with selective mutism" width="2000" height="1167" loading="lazy">
+              <a class="case-link" href="selective-mutism.html">Read the case study <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="project-page" data-project-page="1" aria-label="Svaroots project preview" aria-hidden="true">
+              <img src="Assets/web/svaroots.jpg" alt="Scrapbook preview of Svaroots, a sneaker brand shaped by Indian craft" width="2000" height="1167" loading="lazy">
+              <a class="case-link" href="svaroots.html" tabindex="-1">Read the case study <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="project-page" data-project-page="2" aria-label="Chakli Maker project preview" aria-hidden="true">
+              <img src="Assets/web/chakli.jpg" alt="Scrapbook preview of a redesigned traditional chakli maker" width="2000" height="1167" loading="lazy">
+              <a class="case-link" href="chakli.html" tabindex="-1">Read the case study <span aria-hidden="true">→</span></a>
+            </article>
+            <button class="book-turn book-turn-prev" type="button" data-book-prev aria-label="Previous project"><span aria-hidden="true">‹</span></button>
+            <button class="book-turn book-turn-next" type="button" data-book-next aria-label="Flip to the next project"><span aria-hidden="true">→</span></button>
+          </div>
+          <div class="page-flip" data-page-flip aria-hidden="true">
+            <img class="page-flip-front" src="Assets/web/sm.jpg" alt="">
+            <div class="page-flip-back"></div>
+          </div>
+          <button class="book-cover" type="button" data-book-open aria-label="Open the project scrapbook by turning its right edge">
+            <img src="Assets/web/scrapbook_cover.jpg" alt="My projects scrapbook cover" width="2000" height="1167" loading="lazy">
+          </button>
+        </div>
+
+        <a class="view-projects" href="projects.html">View all projects <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="about reveal-scope" id="about" data-reveal aria-labelledby="about-title">
+        <img class="star about-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s" loading="lazy">
+        <img class="star about-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s" loading="lazy">
+        <img class="star about-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s" loading="lazy">
+        <div class="about-copy reveal-from-left">
+          <h2 id="about-title">About Me</h2>
+          <p>Hi, I'm Khushna, a UX designer who believes good design should feel as natural as a warm cup of tea. I'm driven by curiosity, research, and the tiny details that make an experience feel just right.</p>
+          <p>When I'm not obsessing over user flows, you'll find me discovering new shows, watching romcoms, hanging out with my friends, or well — designing this very portfolio! <img class="inline-berry" src="Assets/strawberry.png" alt="" width="268" height="387"></p>
+        </div>
+        <img class="about-art reveal-from-right" src="Assets/web/tray.png" alt="A tray with favourite foods, a kitten, a book, films and everyday inspirations" width="1800" height="1652" loading="lazy">
+      </section>
+
+      <section class="closing reveal-scope" id="contact" data-reveal aria-labelledby="closing-title">
+        <img class="closing-berry" src="Assets/strawberry.png" alt="" width="268" height="387">
+        <img class="star closing-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s" loading="lazy">
+        <img class="star closing-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s" loading="lazy">
+        <img class="star closing-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s" loading="lazy">
+        <div class="closing-content reveal-from-top">
+          <h2 id="closing-title"><span>Let's create something</span><span>thoughtful together</span></h2>
+          <p>Open to opportunities and collaborations</p>
+          <div class="closing-actions">
+            <a class="button button-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khushna.kazi%40gmail.com" target="_blank" rel="noopener noreferrer"><img src="Assets/envelope.png" alt="" width="2398" height="1612"> Say Hello</a>
+            <a class="button button-outline" href="https://drive.google.com/file/d/1HfoM-o8XWw85pf1IqYA7d3ibTwAPhIxi/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Designed by Khushna</p>
+      <div class="footer-contact">
+        <a class="footer-icon" href="https://www.linkedin.com/in/khushna-kazi-005b32264/" target="_blank" rel="noopener noreferrer" aria-label="Khushna Kazi on LinkedIn"><img src="Assets/linkedin-icon.svg" alt="" width="24" height="24"></a>
+        <a class="footer-icon" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khushna.kazi%40gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Khushna on Gmail"><img src="Assets/gmail-icon.svg" alt="" width="24" height="24"></a>
+        <span class="footer-phone">
+          <button class="footer-icon footer-copy-button" type="button" data-copy-phone="9511674504" aria-label="Copy phone number 9511674504"><img src="Assets/phone-icon.svg" alt="" width="24" height="24"></button>
+          <span class="copy-feedback" role="status" aria-live="polite"></span>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
