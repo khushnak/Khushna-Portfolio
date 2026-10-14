@@ -167,11 +167,44 @@ if (aboutLink) {
   });
 }
 
+const journeyFlow = document.querySelector(".sm-journey-flow");
+if (journeyFlow) {
+  const fifthStage = journeyFlow.querySelector(".sm-child-journey-list li:nth-child(5)");
+  const prompt = journeyFlow.querySelector(".sm-journey-prompt");
+  const branch = journeyFlow.querySelector(".sm-journey-branch");
+  const branchPath = journeyFlow.querySelector(".sm-journey-branch-path");
+
+  function drawJourneyBranch() {
+    const flowBox = journeyFlow.getBoundingClientRect();
+    const stageBox = fifthStage.getBoundingClientRect();
+    const promptBox = prompt.getBoundingClientRect();
+    const width = Math.ceil(flowBox.width);
+    const height = Math.ceil(flowBox.height);
+    branch.setAttribute("viewBox", `0 0 ${width} ${height}`);
+
+    const startX = Math.round(stageBox.right - flowBox.left);
+    const startY = Math.round(stageBox.top - flowBox.top + stageBox.height / 2);
+    const gutterX = width - 12;
+    const approachY = Math.round(promptBox.top - flowBox.top - 15);
+    const endX = Math.round(promptBox.right - flowBox.left - 19);
+    const endY = Math.round(promptBox.top - flowBox.top - 3);
+    branchPath.setAttribute("d", `M ${startX} ${startY} H ${gutterX} V ${approachY} H ${endX} V ${endY}`);
+  }
+
+  drawJourneyBranch();
+  window.addEventListener("resize", drawJourneyBranch);
+  if ("ResizeObserver" in window) {
+    const journeyObserver = new ResizeObserver(drawJourneyBranch);
+    [journeyFlow, fifthStage, prompt].forEach(element => journeyObserver.observe(element));
+  }
+  document.fonts?.ready.then(drawJourneyBranch);
+}
+
 const study = document.querySelector("[data-study]");
 if (study) {
   const studies = {
     "selective-mutism": {
-      title: "Designing Low-Pressure Communication for Children with Selective Mutism",
+      title: "Designing Low Pressure Communication for Children with Selective Mutism",
       image: "Assets/web/sm.jpg",
       alt: "Selective Mutism project scrapbook preview"
     },
