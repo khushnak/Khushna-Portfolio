@@ -309,15 +309,15 @@
 .sm-problem-statement { max-width: 1050px; margin-top: 74px; }
 .sm-problem-statement small { color: var(--sm-violet-dark); font-size: 11px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .sm-problem-statement p { margin: 20px 0 0; color: var(--sm-ink); font-size: clamp(20px, 2vw, 25px); line-height: 1.55; }
-.sm-text-highlight { padding: 0 .08em .02em; border-radius: .16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-.sm-highlight-lavender { background: var(--sm-lavender); }
-.sm-highlight-peach { background: var(--sm-peach); }
-.sm-highlight-green { background: var(--sm-green); }
-.sm-highlight-yellow { background: #f8edc6; }
-.sm-opportunity { margin-top: 78px; padding: 48px 0 8px; text-align: left; }
-.sm-problem-statement + .sm-opportunity { margin-top: 50px; padding-top: 0; }
+.sm-text-highlight { padding: .01em .09em .04em; border-radius: .16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.sm-highlight-lavender { background-color: #dedaf3; }
+.sm-highlight-peach { background-color: #f8dfd0; }
+.sm-highlight-green { background-color: #deedcf; }
+.sm-highlight-yellow { background-color: #f8e9b7; }
+.sm-opportunity { margin-top: 78px; padding: 48px 0 8px; text-align: center; }
+.sm-problem-statement + .sm-opportunity { margin-top: 62px; padding-top: 0; }
 .sm-opportunity small { color: var(--sm-violet-dark); font-size: 11px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
-.sm-opportunity p { max-width: 1050px; margin: 20px 0 0; color: var(--sm-violet); font-family: "Mouse Memoirs", sans-serif; font-size: clamp(62px, 5.3vw, 90px); line-height: 1.07; }
+.sm-opportunity p { max-width: 900px; margin: 20px auto 0; color: var(--sm-violet); font-family: "Mouse Memoirs", sans-serif; font-size: clamp(40px, 3.5vw, 54px); font-weight: 400; line-height: 1.2; text-align: center; }
 .sm-opportunity-arrow { position: absolute; z-index: 2; bottom: -31px; left: 50%; display: grid; width: 62px; height: 62px; place-items: center; color: var(--sm-violet); font-family: "Mouse Memoirs", sans-serif; font-size: 58px; line-height: 1; transform: translateX(-50%); }
 .sm-section.sm-insights { position: relative; padding-bottom: 64px; }
 .sm-section.sm-concepts { padding-top: 86px; border-top: 0; }
@@ -399,7 +399,7 @@
 @media (max-width: 700px) { .sm-image-pair { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .sm-persona-grid, .sm-perspective-list, .sm-secondary-grid { grid-template-columns: 1fr; } .sm-perspective-list article::after { display: none !important; } .sm-setting-child { width: 190px; height: 190px; } .sm-setting-child svg { width: 82px; height: 82px; } .sm-setting-branches { height: 56px; } .sm-setting-contrast { gap: 10px; } .sm-setting-card { min-height: 190px; padding: 16px; } .sm-setting-card strong { font-size: 19px; } .sm-setting-card span { font-size: 9px; } .sm-setting-card p { font-size: 12px; } .sm-child-journey-list li { grid-template-columns: 1fr; gap: 9px; } }
 @media (max-width: 700px) { .sm-research-learning { margin-top: 44px; } .sm-research-learning-grid { grid-template-columns: 1fr; } .sm-research-learning-grid article:last-child { grid-column: auto; } .sm-requirements-heading { margin-top: 54px; } }
-@media (max-width: 700px) { .sm-problem-statement { margin-top: 56px; } .sm-opportunity p { font-size: clamp(42px, 9vw, 62px); } }
+@media (max-width: 700px) { .sm-problem-statement { margin-top: 56px; } .sm-problem-statement + .sm-opportunity { margin-top: 48px; } .sm-opportunity p { font-size: clamp(28px, 6.8vw, 36px); } }
 @media (max-width: 700px) { .sm-research-questions ul { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .sm-interview-grid { grid-template-columns: 1fr; } .sm-matrix { padding-left: 27px; } .sm-matrix-axis-x { left: 27px; } .sm-matrix-quadrant { min-height: 190px; padding: 18px; } }
 @media (max-width: 480px) { .sm-setting-contrast { grid-template-columns: 1fr; } .sm-setting-branches { display: none; } .sm-setting-card { min-height: 0; margin-top: 14px; } .sm-moment-list { grid-template-columns: 1fr; } .sm-moment-list li:not(:last-child)::after { top: auto; right: 50%; bottom: -23px; transform: translateX(50%) rotate(90deg); } .sm-moment-list li:nth-child(2)::after { display: block; } }

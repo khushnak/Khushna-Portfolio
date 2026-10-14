@@ -205,17 +205,17 @@ if (study) {
   const studies = {
     "selective-mutism": {
       title: "Designing Low Pressure Communication for Children with Selective Mutism",
-      image: "Assets/web/sm.jpg",
+      image: "Assets/web/sm.webp",
       alt: "Selective Mutism project scrapbook preview"
     },
     svaroots: {
       title: "Building a Sneaker Brand Around Indian Craft",
-      image: "Assets/web/svaroots.jpg",
+      image: "Assets/web/svaroots.webp",
       alt: "Svaroots project scrapbook preview"
     },
     chakli: {
       title: "Redesigning the Traditional Chakli Maker",
-      image: "Assets/web/chakli.jpg",
+      image: "Assets/web/chakli.webp",
       alt: "Chakli Maker project scrapbook preview"
     }
   };
