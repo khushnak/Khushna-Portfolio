@@ -257,9 +257,7 @@
 .sm-child-journey-detail > strong { color: var(--sm-violet-dark); font-size: 16px; line-height: 1.35; }
 .sm-child-journey-list li p { margin: 0; color: #4c4854; font-size: 15px; line-height: 1.45; }
 .sm-child-journey-detail small { color: var(--sm-violet-dark); font-size: 13px; font-weight: 700; line-height: 1.4; }
-.sm-journey-opportunity { margin-top: 10px; padding: 11px 14px; border-left: 3px solid var(--sm-violet); border-radius: 0 8px 8px 0; background: var(--sm-lilac); }
-.sm-journey-opportunity span { display: block; margin-bottom: 5px; color: var(--sm-violet-dark); font-size: 10px; font-weight: 800; letter-spacing: .07em; }
-.sm-child-journey-list .sm-journey-opportunity p { color: var(--sm-violet-dark); font-size: 14px; }
+.sm-child-journey-list .sm-journey-opportunity-line { color: var(--sm-violet-dark); }
 .sm-child-journey-list .sm-child-journey-turn { border: 2px solid var(--sm-violet); background: var(--sm-lavender); box-shadow: 0 8px 26px rgba(85,80,158,.1); }
 .sm-child-journey-turn .sm-child-journey-stage strong { color: var(--sm-violet-dark); font-size: 18px; }
 .sm-journey-gap { margin-top: 10px; padding-top: 13px; border-top: 1px solid #cbc6ee; }
