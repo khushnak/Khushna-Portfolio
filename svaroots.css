@@ -84,9 +84,6 @@
 .sv-wide-placeholder { min-height: 0; aspect-ratio: 32 / 13; }
 .sv-wide-placeholder.sv-has-image { aspect-ratio: 4081 / 1855; }
 .sv-quote { margin: 25px 0 0; text-align: center; }
-.sv-editorial-bridge { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 68px; margin: 88px 0 35px; padding-top: 40px; }
-.sv-editorial-bridge h3 { max-width: 540px; margin: 0; font-size: clamp(40px, 4vw, 58px); line-height: 1.08; }
-.sv-context .sv-editorial-bridge p { max-width: 410px; margin: 0; font-family: "Kalam", cursive; font-size: 19px; line-height: 1.5; }
 .sv-competition { position: relative; padding: 65px 76px 90px; }
 .sv-competition-layout { display: grid; grid-template-columns: minmax(0, 22%) minmax(0, 1fr); align-items: start; gap: 16px; }
 .sv-competition .sv-competition-aside h2 { margin-bottom: 0; font-size: clamp(46px, 3.3vw, 50px); text-transform: uppercase; }
@@ -108,6 +105,108 @@
 .sv-competition-notes h4 span { color: var(--sv-muted); font-weight: 400; }
 .sv-section .sv-competition-notes p { margin: 0; font-size: 15px; line-height: 1.55; }
 .sv-competition .sv-competition-insight { max-width: 850px; margin: 44px 0 0; }
+.sv-research { isolation: isolate; overflow: hidden; padding-top: 82px; }
+.sv-research-intro { max-width: 760px; }
+.sv-research-intro h2 { max-width: 730px; margin: 0 0 16px; color: var(--sv-ink); font-size: clamp(40px, 4.5vw, 58px); }
+.sv-research-intro > div > p { max-width: 650px; margin: 0; font-family: "Kalam", cursive; font-size: 20px; line-height: 1.45; }
+.sv-research-part { position: relative; margin-top: 105px; }
+.sv-research-number { display: grid; width: 50px; height: 50px; place-items: center; border: 2px solid var(--sv-rust); border-radius: 51% 47% 54% 46%; color: var(--sv-rust); font-family: "Kalam", cursive; font-size: 27px; line-height: 1; transform: rotate(-10deg); }
+.sv-research-part h3 { color: var(--sv-brown); font-size: clamp(30px, 3.6vw, 45px); }
+.sv-research-part p, .sv-research-part figcaption { font-family: "Kalam", cursive; }
+.sv-research-image-slot { position: relative; display: grid; width: 100%; min-height: 0; overflow: hidden; place-items: center; padding: 12px; border: 1px dashed #baa897; background: #eee5d7; color: #715f50; font-family: "Kalam", cursive; font-size: 16px; line-height: 1.25; text-align: center; }
+.sv-research-image-slot img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.sv-research-sneaker .sv-research-image-slot, .sv-research-outfit .sv-research-image-slot, .sv-research-footwear-clipping .sv-research-image-slot { padding: 0; background: #fffaf2; }
+.sv-research-fabric { position: absolute; z-index: 0; display: grid; width: 112px; height: 155px; place-items: center; padding: 13px; background-color: #b46f58; background-image: repeating-linear-gradient(0deg, rgba(255, 248, 230, .12) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(50, 29, 19, .12) 0 1px, transparent 1px 5px); clip-path: polygon(0 3%, 7% 1%, 15% 3%, 24% 0, 33% 3%, 42% 1%, 52% 3%, 62% 0, 71% 3%, 81% 1%, 91% 3%, 100% 0, 97% 12%, 100% 25%, 97% 38%, 100% 50%, 97% 63%, 100% 76%, 97% 88%, 100% 100%, 89% 97%, 78% 100%, 67% 97%, 56% 100%, 45% 97%, 34% 100%, 23% 97%, 12% 100%, 0 97%, 3% 84%, 0 71%, 3% 58%, 0 45%, 3% 32%, 0 19%); filter: drop-shadow(2px 6px 3px rgba(45, 16, 12, .2)); color: #fff6ea; font-family: "Kalam", cursive; font-size: 12px; line-height: 1.1; text-align: center; transform: rotate(-9deg); }
+.sv-research-fabric::after { position: absolute; inset: 9px; border: 1px dashed rgba(255, 248, 230, .6); content: ""; pointer-events: none; }
+.sv-research-fabric--image { display: block; overflow: hidden; padding: 0; background: none; }
+.sv-research-fabric--image::after { display: none; }
+.sv-research-fabric--image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sv-research-textiles { display: grid; grid-template-columns: minmax(0, .34fr) minmax(0, .66fr); grid-template-rows: auto 1fr; column-gap: 28px; min-height: 505px; }
+.sv-research-textiles > .sv-research-number { position: absolute; z-index: 3; top: -53px; left: 0; }
+.sv-research-textiles-copy { grid-column: 1; grid-row: 1; position: relative; z-index: 1; padding-top: 12px; }
+.sv-research-textiles-copy h3 { display: inline-block; max-width: 310px; margin: 0 0 26px; padding: 13px 17px 8px; background: #f0dfc5; clip-path: polygon(1% 4%, 93% 0, 100% 89%, 3% 100%); transform: rotate(-3deg); }
+.sv-research-textiles-copy p { max-width: 290px; margin: 0; font-size: 18px; line-height: 1.45; }
+.sv-research-sneaker-gallery { position: relative; z-index: 1; grid-column: 2; grid-row: 1 / span 2; min-height: 480px; }
+.sv-research-sneaker { position: absolute; margin: 0; padding: 7px 7px 11px; background: #fffaf2; box-shadow: 2px 5px 12px rgba(45, 16, 12, .12); }
+.sv-research-sneaker::before { position: absolute; z-index: 2; top: -9px; left: 38%; width: 64px; height: 16px; background: rgba(205, 174, 138, .65); content: ""; transform: rotate(6deg); }
+.sv-research-sneaker .sv-research-image-slot { aspect-ratio: 1; }
+.sv-research-sneaker-two .sv-research-image-slot { aspect-ratio: 3 / 4; }
+.sv-research-sneaker-one .sv-research-image-slot img, .sv-research-sneaker-three .sv-research-image-slot img { transform: scale(1.08); }
+.sv-research-sneaker figcaption { padding: 7px 4px 0; color: var(--sv-brown); font-size: 16px; font-weight: 700; }
+.sv-research-sneaker-one { top: 25px; left: 4%; width: 43%; transform: rotate(-5deg); }
+.sv-research-sneaker-two { z-index: 2; top: 72px; right: 1%; width: 43%; transform: rotate(5deg); }
+.sv-research-sneaker-two figcaption { padding-right: 8px; text-align: right; }
+.sv-research-sneaker-three { z-index: 3; bottom: 8px; left: 30%; width: 39%; transform: rotate(-1deg); }
+.sv-research-sola { position: absolute; z-index: 2; left: max(0px, calc(30% - 145px)); bottom: 0; width: 132px; margin: 0; transform: rotate(3deg); }
+.sv-research-sola-slot { display: block; width: 110px; height: 73px; overflow: hidden; background: #eae0d3; }
+.sv-research-sola-slot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 57%; transform: scale(1.55); }
+.sv-research-sola figcaption { margin-top: 7px; color: var(--sv-rust); font-size: 13px; line-height: 1.2; }
+.sv-research-textiles-notes { position: relative; z-index: 1; grid-column: 1; grid-row: 2; align-self: end; max-width: 310px; filter: drop-shadow(4px 8px 6px rgba(45,16,12,.13)); }
+.sv-research-observation { position: relative; max-width: 290px; margin: 25px 0 12px !important; padding: 27px 19px 21px; background: linear-gradient(135deg, rgba(255,255,255,.18), transparent 42%), repeating-linear-gradient(0deg, transparent 0 21px, rgba(157,84,61,.055) 22px 23px), #f6dccb; box-shadow: 2px 3px 3px rgba(45,16,12,.09), 5px 11px 16px rgba(45,16,12,.15), inset 0 0 20px rgba(141,67,44,.08); clip-path: polygon(1% 0, 100% 1%, 99% 93%, 95% 100%, 0 99%); color: var(--sv-brown); font-size: 18px !important; line-height: 1.4 !important; transform: rotate(2deg); }
+.sv-research-textiles-notes::before { position: absolute; z-index: 2; top: 11px; left: 37%; width: 75px; height: 24px; border: 1px solid rgba(128,91,61,.13); background: rgba(217,187,146,.62); box-shadow: 0 1px 2px rgba(45,16,12,.08); content: ""; transform: rotate(-6deg); }
+.sv-research-fabric-01 { top: -65px; left: -112px; width: 150px; height: 200px; transform: rotate(-10deg); }
+.sv-research-evolve { min-height: 610px; }
+.sv-research-evolve > .sv-research-number { position: absolute; top: 7px; left: 1%; }
+.sv-research-evolve h3 { width: calc(100% - 76px); max-width: 760px; margin: 0 0 0 76px; color: var(--sv-rust); font-size: clamp(39px, 4.5vw, 56px); }
+.sv-research-evolve-copy { width: min(calc(100% - 76px), 610px); margin: 18px 0 0 76px; padding: 0; background: transparent; font-size: 18px !important; line-height: 1.45 !important; text-align: left; }
+.sv-research-wearer-scene { position: relative; isolation: isolate; z-index: 1; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.45fr) minmax(0, .85fr); grid-template-rows: auto auto; align-items: center; gap: 13px 20px; margin-top: 30px; }
+.sv-research-wearer-scene::before { position: absolute; z-index: 0; content: ""; pointer-events: none; }
+.sv-research-wearer-scene::before { top: 9%; left: 3%; width: 35%; height: 77%; background: repeating-linear-gradient(0deg, transparent 0 23px, rgba(95, 124, 136, .17) 23px 24px), repeating-linear-gradient(90deg, transparent 0 23px, rgba(95, 124, 136, .17) 23px 24px), #f1e9d9; box-shadow: 2px 5px 8px rgba(45, 16, 12, .08); transform: rotate(-6deg); }
+.sv-research-fabric-placeholder { position: absolute; z-index: 0; right: -2%; bottom: -3%; width: 38%; height: 43%; overflow: hidden; background: #e9cbbd; clip-path: polygon(0 2%, 96% 0, 100% 97%, 3% 100%); transform: rotate(6deg); pointer-events: none; }
+.sv-research-fabric-placeholder img { position: absolute; top: 50%; left: 50%; display: block; width: 68%; height: 165%; object-fit: cover; transform: translate(-50%, -50%) rotate(90deg); }
+.sv-research-wearer-scene figure { position: relative; z-index: 1; min-width: 0; margin: 0; }
+.sv-research-outfit .sv-research-image-slot { aspect-ratio: 4 / 5; }
+.sv-research-wearer-scene figcaption { margin-top: 7px; color: var(--sv-rust); font-size: 16px; font-weight: 700; line-height: 1.2; }
+.sv-research-outfit-one { grid-column: 1; grid-row: 1; transform: rotate(-5deg); }
+.sv-research-outfit-two { grid-column: 1; grid-row: 2; width: 86%; margin: -15px 0 0 14% !important; transform: rotate(4deg); }
+.sv-research-outfit-three { grid-column: 3; grid-row: 2; transform: translateY(-28px) rotate(6deg); }
+.sv-research-sneaker-center { grid-column: 2; grid-row: 1 / span 2; padding: 10px; background: #fffaf2; box-shadow: 2px 6px 13px rgba(45, 16, 12, .12); transform: rotate(-2deg); }
+.sv-research-sneaker-center .sv-research-image-slot { aspect-ratio: 1 / .9; background: #ead9c7; }
+.sv-research-sneaker-center figcaption { text-align: center; }
+.sv-research-wearer-arrows { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; overflow: visible; fill: none; stroke: var(--sv-rust); stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.sv-research-fixed-note { position: relative; z-index: 1; width: fit-content; margin: 10px 0 0 auto !important; padding: 7px 13px 2px; background: #f0dfc5; color: var(--sv-rust); font-size: 19px !important; transform: rotate(3deg); }
+.sv-research-fabric-02 { top: 260px; right: -72px; width: 175px; height: 230px; background-color: #756f61; transform: rotate(90deg); }
+.sv-research-beyond { display: block; }
+.sv-research-beyond-copy { position: relative; z-index: 1; max-width: 760px; padding: 8px 0 0 72px; }
+.sv-research-beyond-copy .sv-research-number { position: absolute; top: 0; left: 0; }
+.sv-research-beyond-copy h3 { max-width: 650px; margin: 0 0 20px; }
+.sv-research-beyond-copy p { max-width: 650px; margin: 0; font-size: 18px; line-height: 1.45; }
+.sv-research-footwear-group, .sv-research-cross-group { position: relative; z-index: 1; }
+.sv-research-footwear-group { display: grid; grid-template-columns: minmax(0, .25fr) minmax(0, .75fr); align-items: start; gap: 30px; margin-top: 70px; }
+.sv-research-cross-group { display: grid; grid-template-columns: minmax(0, .68fr) minmax(0, .32fr); align-items: start; gap: 40px; margin-top: 105px; }
+.sv-research-footwear-copy { padding-top: 82px; }
+.sv-research-cross-copy { grid-column: 2; grid-row: 1; align-self: center; padding-bottom: 35px; }
+.sv-research-footwear-group h4, .sv-research-cross-group h4 { margin: 0 0 5px; color: var(--sv-rust); font-family: "Kalam", cursive; font-size: clamp(25px, 3vw, 34px); font-weight: 700; line-height: 1.2; }
+.sv-research-group-copy p { margin: 0; color: var(--sv-brown); font-size: 17px; line-height: 1.35; }
+.sv-research-footwear-clippings { position: relative; height: clamp(720px, 74vw, 930px); transform: translateX(18px); }
+.sv-research-footwear-clipping { position: absolute; min-width: 0; margin: 0; padding: 6px 6px 10px; background: #fffaf2; box-shadow: 2px 5px 10px rgba(45, 16, 12, .12); text-align: left; }
+.sv-research-footwear-clipping .sv-research-image-slot { aspect-ratio: 4 / 3; }
+.sv-research-footwear-clipping:nth-child(1) .sv-research-image-slot { aspect-ratio: 16 / 9; }
+.sv-research-footwear-clipping:nth-child(3) .sv-research-image-slot { aspect-ratio: 4 / 5; }
+.sv-research-footwear-clipping:nth-child(4) .sv-research-image-slot, .sv-research-footwear-clipping:nth-child(5) .sv-research-image-slot { aspect-ratio: 1; }
+.sv-research-footwear-clipping:nth-child(6) .sv-research-image-slot { aspect-ratio: 3 / 4; }
+.sv-research-footwear-clipping figcaption { padding: 7px 3px 0; color: var(--sv-brown); font-size: 15px; font-weight: 700; line-height: 1.2; }
+.sv-research-footwear-clipping figcaption small { display: block; margin-top: 2px; color: var(--sv-muted); font-size: 12px; font-weight: 400; line-height: 1.2; }
+.sv-research-footwear-clipping:nth-child(3) figcaption { text-align: right; }
+.sv-research-rapawalk .sv-research-image-slot img { position: absolute; top: -40%; left: -35%; width: 171%; max-width: none; height: auto; object-fit: initial; transform: none; }
+.sv-research-footwear-clipping:nth-child(1) { z-index: 2; top: 21%; left: 7%; width: 34%; transform: rotate(-1deg); }
+.sv-research-footwear-clipping:nth-child(2) { z-index: 1; top: 4%; left: 38%; width: 33%; transform: rotate(1deg); }
+.sv-research-footwear-clipping:nth-child(3) { z-index: 3; top: 16%; right: 4%; width: 35%; transform: rotate(-8deg); }
+.sv-research-footwear-clipping:nth-child(4) { z-index: 4; top: 39%; left: 33%; width: 33%; transform: rotate(-1deg); }
+.sv-research-footwear-clipping:nth-child(5) { z-index: 2; top: 65%; left: 49%; width: 33%; transform: rotate(1deg); }
+.sv-research-footwear-clipping:nth-child(6) { z-index: 1; top: 49%; left: 5%; width: 34%; transform: rotate(5deg); }
+.sv-research-footwear-clipping:nth-child(2)::before, .sv-research-footwear-clipping:nth-child(5)::before { position: absolute; z-index: 2; top: -8px; left: 34%; width: 53px; height: 15px; background: rgba(205,174,138,.65); content: ""; transform: rotate(-8deg); }
+.sv-research-references { position: relative; z-index: 1; display: grid; grid-column: 1; grid-row: 1; grid-template-columns: 1.15fr .85fr; grid-template-rows: auto auto; align-items: start; gap: 15px 25px; }
+.sv-research-reference { min-width: 0; margin: 0; padding: 7px 7px 12px; background: #fffaf2; box-shadow: 2px 5px 12px rgba(45, 16, 12, .1); }
+.sv-research-reference .sv-research-image-slot { aspect-ratio: 4 / 3; padding: 0; background: #fffaf2; }
+.sv-research-reference figcaption { padding: 9px 4px 0; font-size: 15px; line-height: 1.25; }
+.sv-research-reference figcaption strong { color: var(--sv-rust); }
+.sv-research-ikea { grid-column: 1; grid-row: 1 / span 2; align-self: center; transform: rotate(-4deg); }
+.sv-research-ikea .sv-research-image-slot { aspect-ratio: 3 / 2; }
+.sv-research-lego { grid-column: 2; grid-row: 1; transform: translateY(-23px) rotate(5deg); }
+.sv-research-casetify { grid-column: 2; grid-row: 2; transform: translate(-18px, -8px) rotate(-3deg); }
+.sv-research-takeaway { position: relative; z-index: 1; grid-column: 1; grid-row: 2; justify-self: start; width: fit-content; margin: 0 !important; padding: 9px 17px 4px; background: #f0dfc5; color: var(--sv-rust); font-size: 21px !important; font-weight: 700; transform: rotate(-2deg); }
+.sv-research-botanical { position: absolute; right: -36px; bottom: 140px; width: 72px; height: 120px; fill: none; stroke: #685443; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transform: rotate(9deg); pointer-events: none; }
 .sv-section-heading { display: flex; align-items: end; gap: 48px; margin-bottom: 36px; }
 .sv-section-heading h2 { flex: none; margin-bottom: 0; font-size: clamp(44px, 5vw, 62px); text-transform: uppercase; }
 .sv-section-heading p { max-width: 230px; margin: 0 0 4px; font-family: "Caveat", cursive; font-size: 23px; line-height: 1.13; }
@@ -122,19 +221,19 @@
 .sv-product .sv-product-intro { margin-bottom: 34px; font-family: "Kalam", cursive; font-size: 25px !important; text-align: center; }
 .sv-product-placeholder { position: relative; z-index: 2; min-height: 0; aspect-ratio: 16 / 9; border-bottom-color: transparent; background: transparent; }
 .sv-product-title-row { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: -110px; }
-.sv-product h2 { margin: 0; color: var(--sv-rust); font-size: clamp(90px, 14vw, 210px); letter-spacing: -.04em; }
+.sv-product h2 { margin: 0; color: #a42100; font-size: clamp(90px, 14vw, 210px); letter-spacing: -.04em; }
 .sv-product-logo-placeholder { flex: none; width: clamp(80px, 11vw, 140px); min-height: 0; aspect-ratio: 1; padding: 8px; }
 .sv-product-logo-placeholder strong { font-size: 16px; }
 .sv-product .sv-product-caption { max-width: 790px; margin: 32px auto 0; font-family: "Caveat", cursive; font-size: 27px !important; line-height: 1.1 !important; }
 .sv-product-border { position: absolute; z-index: 3; bottom: 0; left: 0; display: block; width: 19%; min-width: 120px; max-width: 240px; height: 42px; object-fit: cover; object-position: left center; transform: translateY(50%); pointer-events: none; }
-.sv-build { padding-top: 65px; text-align: center; }
+.sv-build { padding-top: 65px; padding-bottom: 45px; text-align: center; }
 .sv-build h2 { margin-bottom: 18px; }
 .sv-build > .sv-handwritten:not(.sv-centered) { max-width: 390px; margin: 0 0 28px auto; text-align: left; }
 .sv-build-placeholder { min-height: 0; aspect-ratio: 16 / 11; }
 .sv-build-placeholder.sv-has-image { aspect-ratio: 5462 / 4580; }
 .sv-choose { display: flex; align-items: center; justify-content: center; gap: 30px; margin: 30px 0 18px; font-family: "Caveat", cursive; font-size: 32px !important; }
 .sv-choose span { font-family: "Nunito Sans", sans-serif; font-size: 28px; }
-.sv-regions { padding-top: 55px; }
+.sv-regions { padding-top: 35px; }
 .sv-or { margin-bottom: 10px; font-family: "Anton", Impact, sans-serif; font-size: 60px !important; text-align: center; }
 .sv-regions h2 { margin-bottom: 30px; text-align: right; text-transform: uppercase; }
 .sv-regions-placeholder { min-height: 0; aspect-ratio: 16 / 15; }
@@ -149,11 +248,34 @@
 .sv-feature-list > div { padding-top: 13px; border-top: 2px solid var(--sv-rust); }
 .sv-feature-list h3 { margin-bottom: 7px; font-family: "Caveat", cursive; font-size: 24px; font-weight: 600; }
 .sv-feature-list p { margin: 0; font-size: 13px; }
-.sv-why-now { display: grid; grid-template-columns: 39% minmax(0, 1fr); align-items: center; gap: 30px; padding: 70px 0 0 96px; }
+.sv-why-now { position: relative; display: grid; grid-template-columns: 39% minmax(0, 1fr); align-items: center; gap: 30px; padding: 70px 0 0 96px; }
 .sv-why-now h2 { margin-bottom: 24px; font-size: 54px; }
-.sv-why-now > div:first-child p { max-width: 370px; font-family: "Caveat", cursive; font-size: 23px; line-height: 1.2; }
+.sv-why-now-copy p { max-width: 370px; font-family: "Caveat", cursive; font-size: 23px; line-height: 1.2; }
 .sv-generations-placeholder { min-height: 0; aspect-ratio: 4 / 3; border-radius: 0; }
 .sv-generations-placeholder.sv-has-image { aspect-ratio: 3351 / 2362; }
+.sv-border-placeholder { position: absolute; z-index: 1; width: 34px; min-height: 0; height: 220px; padding: 6px 4px; border: 1px dashed #b9aa99; border-radius: 0; background: #e9e0d3; color: #806c5a; pointer-events: none; }
+.sv-border-placeholder span { writing-mode: vertical-rl; font-family: "Kalam", cursive; font-size: 10px; font-weight: 400; letter-spacing: .02em; }
+.sv-border-placeholder-why { top: 76px; left: 0; height: 260px; }
+.sv-positioning-edge-border { position: absolute; z-index: 1; top: 20px; right: 0; width: 34px; height: 300px; object-fit: cover; object-position: center; pointer-events: none; }
+.sv-edge-tape { position: absolute; z-index: 1; display: block; pointer-events: none; }
+.sv-edge-tape-why { top: 75px; left: 0; width: 28px; height: 260px; object-fit: cover; object-position: center; }
+.sv-positioning { position: relative; padding: 92px 76px 88px; background: radial-gradient(circle at 9% 18%, rgba(189,137,99,.07), transparent 34%), var(--sv-paper); }
+.sv-positioning-intro { position: relative; z-index: 2; max-width: 780px; }
+.sv-positioning .sv-positioning-intro h2 { max-width: 700px; margin-bottom: 20px; color: var(--sv-ink); font-size: 54px; }
+.sv-positioning-intro p { max-width: 680px; margin: 0; font-family: "Kalam", cursive; font-size: 21px; line-height: 1.48; }
+.sv-positioning-stage { position: relative; margin-top: 62px; padding: 205px 0 170px; }
+.sv-positioning-map { position: relative; z-index: 1; width: 100%; margin: 0; transform: rotate(-.5deg); }
+.sv-positioning-map-scroll { width: 100%; }
+.sv-positioning-map img { display: block; width: 100%; height: auto; filter: drop-shadow(3px 10px 8px rgba(46,26,17,.14)); }
+.sv-positioning-scroll-hint { display: none; }
+.sv-positioning-note { position: absolute; z-index: 2; max-width: 235px; margin: 0; color: var(--sv-brown); font-family: "Kalam", cursive; font-size: 18px !important; line-height: 1.32 !important; }
+.sv-positioning-note span { display: inline; background: linear-gradient(transparent 57%, rgba(193,81,39,.2) 57% 87%, transparent 87%); color: var(--sv-rust); font-weight: 700; }
+.sv-positioning-note-landscape { top: 0; left: 2%; transform: rotate(-2deg); }
+.sv-positioning-note-position { top: 55px; right: 0; max-width: 300px; transform: rotate(2deg); }
+.sv-positioning-note-alternatives { bottom: 95px; left: 12%; max-width: 365px; transform: rotate(-1deg); }
+.sv-positioning-arrows { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; overflow: visible; fill: none; stroke: var(--sv-rust); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.sv-positioning-arrows > path { marker-end: url(#sv-positioning-arrowhead); }
+.sv-positioning-arrows marker path { fill: none; stroke: var(--sv-rust); stroke-width: 1.6; }
 .sv-business { position: relative; z-index: 2; padding: 90px 50px 80px; background: #a42100; color: #fffaf3; }
 .sv-business h2 { text-transform: uppercase; }
 .sv-business-layout { display: grid; grid-template-columns: minmax(0, 43%) minmax(0, 1fr); gap: 46px; align-items: start; }
@@ -220,7 +342,10 @@
 .sv-symbol-margin-note { position: absolute; top: 6px; right: 2%; width: min(24%, 220px); padding: 19px 22px 14px; background: #f0dfc5; box-shadow: 2px 4px 8px rgba(45, 16, 12, .1); color: var(--sv-rust); font-family: "Kalam", cursive; font-size: 18px; line-height: 1.25; transform: rotate(-4deg); }
 .sv-symbol-margin-note::before { position: absolute; top: -7px; left: 35%; width: 68px; height: 15px; background: rgba(207, 177, 140, .58); content: ""; transform: rotate(5deg); }
 .sv-symbol-routes-wrap { position: relative; margin-top: 48px; }
-.sv-symbol-fabric { position: absolute; top: -30px; right: -10px; width: 104px; height: 122px; object-fit: cover; object-position: top; box-shadow: 2px 5px 8px rgba(45, 16, 12, .12); transform: rotate(11deg); }
+.sv-symbol-fabric-piece { position: absolute; top: -30px; right: -10px; display: block; width: 104px; height: 122px; filter: drop-shadow(2px 6px 3px rgba(45, 16, 12, .24)); transform: rotate(11deg) skewY(-3deg); }
+.sv-symbol-fabric, .sv-symbol-fabric-piece::after { position: absolute; inset: 0; width: 100%; height: 100%; clip-path: polygon(0 3%, 6% 0, 13% 3%, 20% 1%, 29% 3%, 37% 0, 45% 3%, 54% 1%, 63% 3%, 72% 0, 80% 3%, 89% 1%, 96% 3%, 100% 0, 97% 11%, 100% 21%, 97% 32%, 100% 43%, 97% 54%, 100% 65%, 97% 76%, 100% 88%, 97% 100%, 88% 97%, 79% 100%, 70% 97%, 61% 100%, 52% 97%, 43% 100%, 34% 97%, 25% 100%, 16% 97%, 7% 100%, 0 97%, 3% 86%, 0 74%, 3% 62%, 0 50%, 3% 38%, 0 26%, 3% 14%); }
+.sv-symbol-fabric { display: block; object-fit: cover; object-position: top; }
+.sv-symbol-fabric-piece::after { background: repeating-linear-gradient(0deg, rgba(255, 246, 225, .15) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(30, 19, 14, .11) 0 1px, transparent 1px 4px); content: ""; pointer-events: none; }
 .sv-symbol-routes { position: relative; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 16px 9px; padding: 24px 18px; background: #f8edda; clip-path: polygon(0 2%, 12% 0, 30% 1%, 53% 0, 76% 1%, 100% 0, 99% 97%, 70% 100%, 38% 98%, 0 100%); }
 .sv-symbol-route { display: inline-block; padding: 9px 14px 5px; background: #ead2b3; border-radius: 55% 46% 53% 48%; color: var(--sv-brown); font-family: "Kalam", cursive; font-size: clamp(16px, 1.6vw, 20px); font-weight: 600; line-height: 1.2; transform: rotate(-2deg); }
 .sv-symbol-route:nth-child(even) { transform: translateY(8px) rotate(2deg); }
@@ -268,7 +393,7 @@
 .sv-brand-logo-reveal { margin-top: 74px; }
 .sv-brand-logo-reveal > h3 { margin: 15px 0 6px; font-family: "Kalam", cursive; font-weight: 700; }
 .sv-symbol-reveal-copy { margin: 0 0 24px; font-family: "Kalam", cursive; font-size: 18px; }
-.sv-symbol-final { width: min(60%, 520px); aspect-ratio: 1 / .78; margin: 0 auto; border-style: solid; background: #fffaf2; font-size: 24px; }
+.sv-symbol-final { width: min(100%, 980px); aspect-ratio: 7 / 4; margin: 0 auto; padding: 0; background: transparent; box-shadow: none; }
 .sv-logo-system { max-width: 810px; margin: 70px auto 0; }
 .sv-brand-logo-reveal .sv-logo-system h4 { font-family: "Kalam", cursive; font-weight: 700; }
 .sv-logo-system .sv-brand-placeholder { aspect-ratio: 32 / 17; }
@@ -821,6 +946,7 @@
   .sv-section .sv-quote { margin-top: 25px; }
   .sv-editorial-bridge { margin-bottom: 20px; }
   .sv-competition { padding-top: 20px; padding-bottom: 70px; }
+  .sv-research { padding-top: 82px; }
   .sv-section .sv-statement { position: relative; z-index: 1; margin-top: 75px; margin-bottom: 0; }
   .sv-wide-placeholder { position: relative; z-index: 2; margin-top: -12px; border-top: 0; background: #ebe7df; }
   .sv-section .sv-competition-aside p { font-size: 25px; }
@@ -831,6 +957,7 @@
   .sv-product h2 { font-size: clamp(150px, 17vw, 246px); }
   .sv-product-logo-placeholder { width: clamp(105px, 11vw, 160px); }
   .sv-why-now h2 { font-size: 68px; }
+  .sv-positioning .sv-positioning-intro h2 { font-size: 68px; }
   .sv-business-left h2 { font-size: clamp(76px, 7vw, 100px); }
   .sv-business { padding-top: 140px; padding-bottom: 0; }
   .sv-more-than { position: relative; width: calc(100% + 50px); margin-left: -50px; grid-template-columns: 70% 1fr; }
@@ -899,14 +1026,14 @@
   .sv-symbol-margin-note { position: relative; top: auto; right: auto; display: block; width: min(235px, 75%); margin: 24px 4% 0 auto; font-size: 16px; }
   .sv-symbol-routes-wrap { margin-top: 44px; }
   .sv-symbol-routes { justify-content: center; gap: 13px 10px; padding: 25px 12px; }
-  .sv-symbol-fabric { right: 0; width: 76px; height: 92px; }
+  .sv-symbol-fabric-piece { right: 0; width: 76px; height: 92px; }
   .sv-symbol-route { font-size: 16px; }
   .sv-symbol-route-note { font-size: 16px; }
   .sv-symbol-step { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 65px; }
   .sv-symbol-step-copy p { max-width: 560px; font-size: 17px; }
   .sv-symbol-sketches { gap: 15px; }
   .sv-symbol-concepts { gap: 8px; }
-  .sv-symbol-final { width: min(100%, 460px); }
+  .sv-symbol-final { width: 100%; }
 }
 @media (max-width: 480px) {
   .sv-symbol-sketches { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 6px 12px; }
@@ -919,4 +1046,109 @@
   .sv-symbol-team-shortlist { grid-column: 1 / -1; grid-row: auto; }
   .sv-symbol-team-combinations { aspect-ratio: 1 / .9; }
   .sv-symbol-team-note { grid-column: 1 / -1; margin-top: 5px; }
+}
+@media (max-width: 900px) {
+  .sv-research-textiles { grid-template-columns: minmax(0, .38fr) minmax(0, .62fr); gap: 18px; }
+  .sv-research-sneaker-gallery { min-height: 395px; }
+  .sv-research-evolve-copy { width: 64%; }
+}
+@media (max-width: 850px) {
+  .sv-research-footwear-group, .sv-research-cross-group { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .sv-research-footwear-copy { padding-top: 0; }
+  .sv-research-cross-copy { grid-column: 1; grid-row: 1; padding-bottom: 0; }
+  .sv-research-references { grid-column: 1; grid-row: 2; }
+  .sv-research-takeaway { grid-column: 1; grid-row: 3; }
+  .sv-research-footwear-clippings { display: flex; height: auto; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 24px 16px; transform: none; }
+  .sv-research-footwear-clipping, .sv-research-footwear-clipping:nth-child(n) { position: relative; top: auto; right: auto; bottom: auto; left: auto; width: calc(50% - 8px); margin-top: 0; }
+  .sv-research-footwear-clipping:nth-child(3) { transform: rotate(-3deg); }
+}
+@media (max-width: 700px) {
+  .sv-research-intro > div > p { font-size: 18px; }
+  .sv-research-part { margin-top: 95px; }
+  .sv-research-textiles { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .sv-research-textiles-copy { grid-column: 1; grid-row: 1; }
+  .sv-research-textiles-copy p { max-width: 540px; }
+  .sv-research-sneaker-gallery { grid-column: 1; grid-row: 2; min-height: 480px; margin-top: 20px; }
+  .sv-research-textiles-notes { grid-column: 1; grid-row: 3; max-width: 85%; margin: 7px 0 0 auto; }
+  .sv-research-observation { margin-top: 7px !important; }
+  .sv-research-evolve { min-height: 0; }
+  .sv-research-evolve > .sv-research-number { top: -64px; }
+  .sv-research-evolve h3 { width: 100%; margin-left: 0; }
+  .sv-research-evolve-copy { width: min(100%, 580px); margin-left: 0; }
+  .sv-research-wearer-scene { gap: 12px; }
+  .sv-research-beyond-copy { padding-top: 0; padding-left: 66px; }
+  .sv-research-beyond-copy h3, .sv-research-beyond-copy p { max-width: 580px; }
+  .sv-research-footwear-group, .sv-research-cross-group { width: 100%; margin-top: 55px; }
+  .sv-research-footwear-group { text-align: left; }
+  .sv-research-footwear-clippings { justify-content: space-between; }
+  .sv-research-references { margin-top: 0; }
+  .sv-research-fabric { width: 110px; height: 125px; font-size: 10px; }
+  .sv-research-fabric-01 { top: 0; left: -70px; }
+  .sv-research-fabric-02 { top: 350px; right: -70px; }
+  .sv-research-botanical { display: none; }
+}
+@media (min-width: 481px) and (max-width: 540px) {
+  .sv-research-footwear-clipping:nth-child(n) { width: 47%; }
+}
+@media (max-width: 480px) {
+  .sv-research-intro h2 { font-size: clamp(39px, 10vw, 48px); }
+  .sv-research-sneaker-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; min-height: 0; padding: 18px 5px; }
+  .sv-research-sneaker-one, .sv-research-sneaker-two, .sv-research-sneaker-three { position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 100%; }
+  .sv-research-sneaker-three { grid-column: 1; width: 100%; margin: 0; }
+  .sv-research-sola { position: relative; right: auto; bottom: auto; left: auto; grid-column: 2; width: 100%; margin: 9px 0 0; }
+  .sv-research-sola-slot { width: 100%; height: auto; aspect-ratio: 3 / 2; }
+  .sv-research-sneaker figcaption { font-size: 13px; }
+  .sv-research-image-slot { font-size: 14px; }
+  .sv-research-evolve-copy { width: 100%; font-size: 17px !important; }
+  .sv-research-wearer-scene { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+  .sv-research-outfit-one { grid-column: 1; grid-row: 1; }
+  .sv-research-outfit-two { grid-column: 2; grid-row: 1; width: 100%; margin: 0 !important; }
+  .sv-research-sneaker-center { grid-column: 1 / -1; grid-row: 2; width: 82%; margin: 8px auto !important; }
+  .sv-research-outfit-three { grid-column: 2; grid-row: 3; width: 100%; transform: rotate(5deg); }
+  .sv-research-fabric-placeholder { right: -4%; bottom: -1%; width: 60%; height: 20%; }
+  .sv-research-wearer-arrows { display: none; }
+  .sv-research-fixed-note { font-size: 16px !important; }
+  .sv-research-references { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+  .sv-research-ikea { grid-column: 1 / -1; grid-row: 1; width: 75%; }
+  .sv-research-ikea .sv-research-image-slot { aspect-ratio: 3 / 2; }
+  .sv-research-lego { grid-column: 1; grid-row: 2; transform: rotate(4deg); }
+  .sv-research-casetify { grid-column: 2; grid-row: 2; transform: translateY(8px) rotate(-3deg); }
+  .sv-research-reference figcaption { font-size: 13px; }
+  .sv-research-footwear-clippings { gap: 22px 10px; }
+  .sv-research-footwear-clipping, .sv-research-footwear-clipping:nth-child(n) { width: 47%; margin-top: 0; }
+  .sv-research-footwear-clipping:nth-child(2), .sv-research-footwear-clipping:nth-child(5) { margin-top: 13px; }
+  .sv-research-footwear-clipping figcaption { font-size: 13px; }
+  .sv-research-beyond-copy { padding-left: 0; }
+  .sv-research-beyond-copy .sv-research-number { position: relative; margin-bottom: 13px; }
+  .sv-research-takeaway { font-size: 17px !important; }
+  .sv-research-fabric { width: 94px; height: 100px; font-size: 10px; }
+  .sv-research-fabric-01 { top: 0; left: -64px; }
+  .sv-research-fabric-02 { top: 350px; right: -64px; bottom: auto; left: auto; }
+}
+@media (max-width: 950px) {
+  .sv-positioning { padding: 78px 45px; }
+  .sv-positioning-stage { padding-top: 205px; }
+}
+@media (min-width: 701px) and (max-width: 800px) {
+  .sv-positioning-note { font-size: 16px !important; }
+  .sv-positioning-note-position { max-width: 280px; }
+}
+@media (max-width: 700px) {
+  .sv-research { padding-top: 76px; }
+  .sv-build { padding-bottom: 35px; }
+  .sv-regions { padding-top: 24px; }
+  .sv-border-placeholder, .sv-edge-tape, .sv-positioning-edge-border { display: none; }
+  .sv-positioning { padding: 70px 24px; }
+  .sv-positioning .sv-positioning-intro h2 { font-size: 54px; }
+  .sv-positioning-intro p { font-size: 18px; }
+  .sv-positioning-stage { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; margin-top: 42px; padding: 0; }
+  .sv-positioning-note { position: relative; top: auto; right: auto; bottom: auto; left: auto; max-width: 100%; font-size: 17px !important; transform: none; }
+  .sv-positioning-note-landscape { order: 1; }
+  .sv-positioning-note-position { order: 2; }
+  .sv-positioning-map { order: 3; width: 100%; transform: none; }
+  .sv-positioning-map-scroll { overflow-x: auto; overscroll-behavior-inline: contain; }
+  .sv-positioning-map img { width: max(100%, 740px); max-width: none; }
+  .sv-positioning-scroll-hint { display: block; margin: 8px 0 0; color: var(--sv-rust); font-family: "Kalam", cursive; font-size: 15px !important; }
+  .sv-positioning-note-alternatives { order: 4; }
+  .sv-positioning-arrows { display: none; }
 }
