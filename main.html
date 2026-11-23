@@ -15,15 +15,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261123">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261123-3">
+    <script src="script.js?v=20261123-2" defer></script>
   </head>
   <body class="page-home">
-    <header class="site-header">
+    <header class="site-header mobile-header">
       <a class="brand" href="main.html" aria-label="Khushna Kazi, home">
         <img src="Assets/logo.png" alt="" width="920" height="1080">
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
+      <button class="mobile-menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="mobile-nav" aria-label="Main navigation">
         <a class="nav-link is-current" href="main.html" aria-current="page">Home</a>
         <a class="nav-link" href="projects.html">Projects</a>
         <a class="nav-link" href="#about" data-scroll-to="about">About Me</a>
@@ -35,6 +36,12 @@
       <section class="hero reveal-scope" id="home" data-reveal aria-labelledby="hero-title">
         <h1 class="hero-intro reveal-from-top" id="hero-title"><span>Hello, I'm Khushna Kazi,</span> a UX Designer</h1>
         <img class="hero-art reveal-from-top" src="Assets/cloud_hero.webp" alt="" width="3200" height="1458" fetchpriority="high">
+        <p class="hero-mobile-art" aria-label="Making things, noticing things, probably overthinking things.">
+          <span>Making things,</span>
+          <span>noticing things,</span>
+          <span>probably</span>
+          <span>overthinking things.</span>
+        </p>
         <img class="star hero-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s" width="256" height="244">
         <img class="star hero-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s" width="256" height="244">
         <img class="star hero-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s" width="256" height="244">
@@ -43,7 +50,7 @@
       </section>
 
       <section class="featured-projects reveal-scope" id="featured-projects" data-reveal aria-labelledby="featured-title">
-        <h2 class="visually-hidden" id="featured-title">Featured projects</h2>
+        <h2 class="mobile-projects-title" id="featured-title">My Projects</h2>
         <img class="star feature-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s" loading="lazy" width="256" height="244">
         <img class="star feature-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s" loading="lazy" width="256" height="244">
         <img class="star feature-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s" loading="lazy" width="256" height="244">
@@ -77,9 +84,9 @@
         </div>
 
         <div class="featured-mobile" aria-label="Featured case studies">
-          <a href="selective-mutism.html"><img src="Assets/web/sm.webp" alt="Selective Mutism project preview" width="2000" height="1166" loading="lazy"><span>Selective Mutism <b>Read the case study →</b></span></a>
-          <a href="svaroots.html"><img src="Assets/web/svaroots.webp" alt="Svaroots project preview" width="2000" height="1166" loading="lazy"><span>Svaroots <b>Read the case study →</b></span></a>
-          <a href="chakli.html"><img src="Assets/web/chakli.webp" alt="Chakli Maker project preview" width="2000" height="1166" loading="lazy"><span>Chakli Maker <b>Read the case study →</b></span></a>
+          <a href="selective-mutism.html"><img src="Assets/sm_cover.webp" alt="Selective Mutism project sketchbook with communication tool concepts" width="1448" height="1086" loading="lazy"><span><strong>Selective Mutism</strong><b>Read the case study →</b></span></a>
+          <a href="svaroots.html"><img src="Assets/svaroots_cover.webp" alt="Svaroots sneaker brand concept sketchbook" width="1448" height="1086" loading="lazy"><span><strong>Svaroots</strong><b>Read the case study →</b></span></a>
+          <a href="chakli.html"><img src="Assets/chakli_cover.webp" alt="Traditional chakli maker redesign sketchbook" width="1280" height="720" loading="lazy"><span><strong>Chakli Maker</strong><b>Read the case study →</b></span></a>
         </div>
 
         <a class="view-projects" href="projects.html">View all projects <span aria-hidden="true">→</span></a>

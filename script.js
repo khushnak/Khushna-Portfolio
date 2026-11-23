@@ -1,5 +1,33 @@
 const revealScopes = document.querySelectorAll("[data-reveal]");
 
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+if (mobileMenuToggle) {
+  const mobileNav = document.getElementById(mobileMenuToggle.getAttribute("aria-controls"));
+  const closeMobileMenu = () => {
+    mobileNav.classList.remove("is-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+    mobileMenuToggle.setAttribute("aria-label", "Open menu");
+  };
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenuToggle.getAttribute("aria-expanded") === "true";
+    mobileNav.classList.toggle("is-open", !isOpen);
+    mobileMenuToggle.setAttribute("aria-expanded", String(!isOpen));
+    mobileMenuToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+  });
+  mobileNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMobileMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMobileMenu();
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".mobile-header")) closeMobileMenu();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) closeMobileMenu();
+  });
+}
+
 const overviewTimeline = document.querySelector(".sm-overview .sm-timeline");
 if (overviewTimeline && "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   overviewTimeline.classList.add("is-pending");
@@ -153,7 +181,8 @@ if (aboutLink) {
     if (!target) return;
     event.preventDefault();
     const start = window.scrollY;
-    const destination = target.getBoundingClientRect().top + start;
+    const headerOffset = window.innerWidth <= 700 ? document.querySelector(".site-header").offsetHeight + 10 : 0;
+    const destination = target.getBoundingClientRect().top + start - headerOffset;
     const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 380;
     const started = performance.now();
     function animate(now) {
