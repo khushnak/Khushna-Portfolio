@@ -154,3 +154,34 @@
   .chakli-hero h1 { font-size: 56px; }
   .chakli-section h2 { font-size: 38px; }
 }
+
+@media (max-width: 700px) {
+  .chakli-case { width: calc(100% - 16px); }
+  .chakli-back { margin: 20px 0 12px; padding-left: 16px; }
+  .chakli-section { padding: 52px 20px; }
+  .chakli-section h2 { margin-bottom: 24px; font-size: clamp(29px, 8vw, 38px); }
+  .chakli-hero h1 { font-size: clamp(38px, 10vw, 54px); overflow-wrap: anywhere; }
+  .chakli-hero-subtitle { font-size: 18px !important; }
+  .chakli-hero-image { height: auto; aspect-ratio: auto; }
+  .chakli-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .chakli-overview-grid, .chakli-why, .chakli-audit-foot, .chakli-idea-heading,
+  .chakli-research-grid, .chakli-audit-grid, .chakli-feature-grid,
+  .chakli-impact-grid, .chakli-projections, .chakli-reflections { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .chakli-concepts, .chakli-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chakli-rules { grid-template-columns: minmax(0, 1fr); }
+  .chakli-why { padding-top: 52px; padding-bottom: 52px; }
+  .chakli-stat { min-height: 0; }
+  .chakli-audit-grid > div { min-height: 0; }
+  .chakli-table-wrap { overflow-x: auto; }
+  .chakli-table { min-width: 660px; }
+  .chakli-equation { grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .chakli-equation img { width: min(100%, 270px); margin: 0 auto; }
+  .chakli-next { padding: 55px 16px 70px; }
+  .chakli-next-card { grid-template-columns: 105px minmax(0, 1fr); }
+  .chakli-next-card > span { padding: 14px; }
+  .chakli-next-card strong { font-size: 15px; }
+}
+
+@media (max-width: 380px) {
+  .chakli-concepts, .chakli-steps { grid-template-columns: minmax(0, 1fr); }
+}

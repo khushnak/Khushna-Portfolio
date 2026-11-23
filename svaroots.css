@@ -556,7 +556,7 @@
 .sv-intent-cart-arrow, .sv-intent-design-arrow { position: absolute; z-index: 4; width: 66px; height: 45px; color: var(--sv-brown); stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .sv-intent-cart-arrow { top: 31px; right: 13%; transform: rotate(9deg); }
 .sv-intent-wish-photo-one { top: 21px; left: 1%; width: 55%; height: 188px; transform: rotate(-5deg); }
-.sv-intent-wish-photo-two { top: 65px; right: 0; width: 56%; height: 171px; transform: rotate(5deg); }
+.sv-intent-wish-photo-two { top: 65px; right: 0; width: 56%; height: 171px; overflow: hidden; transform: rotate(5deg); }
 .sv-intent-wish-photo-one img { object-fit: cover; object-position: center 53%; transform: scale(1.5); }
 .sv-intent-wish-photo-two img { object-fit: cover; object-position: center 54%; transform: scale(1.95); }
 .sv-intent-wish-tape { top: 8px; left: 16%; transform: rotate(-12deg); }
@@ -1140,7 +1140,7 @@
   .sv-regions { padding-top: 24px; }
   .sv-border-placeholder, .sv-edge-tape, .sv-positioning-edge-border { display: none; }
   .sv-positioning { padding: 70px 24px; }
-  .sv-positioning .sv-positioning-intro h2 { font-size: 54px; }
+  .sv-positioning .sv-positioning-intro h2 { font-size: clamp(36px, 10vw, 54px); }
   .sv-positioning-intro p { font-size: 18px; }
   .sv-positioning-stage { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; margin-top: 42px; padding: 0; }
   .sv-positioning-note { position: relative; top: auto; right: auto; bottom: auto; left: auto; max-width: 100%; font-size: 17px !important; transform: none; }

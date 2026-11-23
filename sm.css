@@ -409,3 +409,17 @@
 @media (max-width: 700px) { .sm-research-questions ul { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .sm-interview-grid { grid-template-columns: 1fr; } .sm-matrix { padding-left: 27px; } .sm-matrix-axis-x { left: 27px; } .sm-matrix-quadrant { min-height: 190px; padding: 18px; } }
 @media (max-width: 480px) { .sm-setting-contrast { grid-template-columns: 1fr; } .sm-setting-branches { display: none; } .sm-setting-card { min-height: 0; margin-top: 14px; } .sm-moment-list { grid-template-columns: 1fr; } .sm-moment-list li:not(:last-child)::after { top: auto; right: 50%; bottom: -23px; transform: translateX(50%) rotate(90deg); } .sm-moment-list li:nth-child(2)::after { display: block; } }
+
+@media (max-width: 700px) {
+  .sm-case { width: calc(100% - 16px); }
+  .sm-back { margin: 20px 14px 0; }
+  .sm-section, .sm-section.sm-overview { padding: 56px 20px; }
+  .sm-section-heading h2, .sm-solution .sm-section-heading h2 { font-size: clamp(40px, 10vw, 60px); overflow-wrap: anywhere; }
+  .sm-overview h1 { font-size: clamp(43px, 10vw, 60px); overflow-wrap: anywhere; }
+  .sm-evidence-grid, .sm-people-grid, .sm-journey-list, .sm-requirements-grid,
+  .sm-three-points, .sm-flow-grid, .sm-structure-grid, .sm-reflection-grid,
+  .sm-concept-grid { grid-template-columns: minmax(0, 1fr); }
+  .sm-next-card { grid-template-columns: 105px minmax(0, 1fr); }
+  .sm-next-card > span { padding: 14px; }
+  .sm-next-card strong { font-size: 15px; }
+}

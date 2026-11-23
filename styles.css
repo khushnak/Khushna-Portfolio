@@ -17,7 +17,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  min-width: 940px;
+  min-width: 0;
   background: var(--cream);
   color: var(--ink);
   font-family: var(--body-font);
@@ -347,6 +347,7 @@ a { color: inherit; }
 .feature-star.star-2 { right: 9%; top: 82%; width: 44px; }
 .feature-star.star-3 { right: 7%; bottom: -8%; width: 39px; }
 .featured-projects.is-book-open .feature-star { opacity: 0 !important; visibility: hidden; animation: none !important; }
+.featured-mobile { display: none; }
 
 .about {
   display: grid;
@@ -473,6 +474,48 @@ a { color: inherit; }
 .study-title { margin: 42px 0 32px; font-size: clamp(38px, 4.4vw, 64px); line-height: 1.2; }
 .study-preview { display: block; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 12px 27px rgba(43, 48, 34, .1); }
 .study-status { color: var(--muted); font-size: 16px; }
+
+@media (max-width: 700px) {
+  .site-header { height: auto; min-height: 76px; flex-wrap: wrap; gap: 6px 12px; padding: 10px 20px; }
+  .site-nav { width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 9px 12px; padding-bottom: 6px; }
+  .nav-link { font-size: 12px; }
+  .contact-button { min-height: 38px; padding: 8px 11px; font-size: 11px; }
+  .site-footer { min-height: 0; flex-wrap: wrap; gap: 18px; padding: 24px; }
+  .hero { min-height: 500px; padding: 66px 22px 64px; }
+  .hero-intro { max-width: 340px; font-size: 20px; line-height: 1.4; }
+  .hero-art { width: min(100%, 520px); margin-top: 67px; }
+  .hero-star.star-1 { left: 7%; }
+  .hero-star.star-2 { right: 8%; }
+  .hero-star.star-4 { bottom: 45px; }
+  .featured-projects { min-height: 0; padding: 12px 20px 78px; }
+  .book-hint, .book-stage, .feature-star { display: none !important; }
+  .featured-mobile { display: grid; gap: 24px; max-width: 520px; margin: 0 auto; text-align: left; }
+  .featured-mobile a { display: block; overflow: hidden; border: 1px solid rgba(69, 98, 66, .18); border-radius: 14px; background: #fff; text-decoration: none; box-shadow: 0 7px 20px rgba(43, 48, 34, .08); }
+  .featured-mobile img { display: block; width: 100%; height: auto; }
+  .featured-mobile span { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; padding: 16px 18px; font-size: 18px; font-weight: 800; }
+  .featured-mobile b { color: var(--green); font-size: 13px; }
+  .view-projects { margin-top: 30px; font-size: 21px; }
+  .about { min-height: 0; grid-template-columns: minmax(0, 1fr); padding: 42px 24px 56px; }
+  .about-copy { max-width: 580px; padding-top: 0; }
+  .about-copy h2 { font-size: 43px; }
+  .about-art { width: min(100%, 570px); max-width: 100%; justify-self: center; margin: 28px auto 0; }
+  .about-star.star-2 { left: auto; right: 8%; }
+  .closing { min-height: 0; padding: 65px 24px 80px; }
+  .closing h2 { font-size: clamp(30px, 8vw, 40px); }
+  .closing h2 span + span { margin-left: 18px; }
+  .closing-actions { flex-wrap: wrap; gap: 14px; }
+  .closing .button { width: min(100%, 300px); min-height: 56px; }
+  .closing-berry { right: 0; top: -60px; width: 33px; height: 49px; }
+  .closing-content { width: 100%; min-width: 0; }
+  .closing h2 { width: 100%; }
+  .study-main { padding: 45px 24px 80px; }
+  .study-title { margin: 35px 0 25px; font-size: clamp(36px, 10vw, 52px); }
+}
+
+@media (max-width: 380px) {
+  .closing h2 { font-size: 27px; }
+  .closing h2 span + span { margin-left: 0; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
