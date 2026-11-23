@@ -1,5 +1,31 @@
 const revealScopes = document.querySelectorAll("[data-reveal]");
 
+const caseJumpNav = document.querySelector(".case-jump-nav");
+if (caseJumpNav) {
+  const jumpLinks = [...caseJumpNav.querySelectorAll('a[href^="#"]')];
+  const jumpTargets = jumpLinks.map((link) => ({ link, target: document.getElementById(link.hash.slice(1)) })).filter(({ target }) => target);
+  let jumpFrame = 0;
+  const updateCaseJump = () => {
+    jumpFrame = 0;
+    const cutoff = caseJumpNav.getBoundingClientRect().bottom + 18;
+    let current = jumpTargets[0];
+    for (const item of jumpTargets) {
+      if (item.target.getBoundingClientRect().top <= cutoff && (!current || item.target.getBoundingClientRect().top > current.target.getBoundingClientRect().top)) current = item;
+    }
+    for (const item of jumpTargets) {
+      if (item === current) item.link.setAttribute("aria-current", "location");
+      else item.link.removeAttribute("aria-current");
+    }
+  };
+  const scheduleCaseJump = () => {
+    if (!jumpFrame) jumpFrame = requestAnimationFrame(updateCaseJump);
+  };
+  window.addEventListener("scroll", scheduleCaseJump, { passive: true });
+  window.addEventListener("resize", scheduleCaseJump);
+  window.addEventListener("hashchange", scheduleCaseJump);
+  scheduleCaseJump();
+}
+
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 if (mobileMenuToggle) {
   const mobileNav = document.getElementById(mobileMenuToggle.getAttribute("aria-controls"));
