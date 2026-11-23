@@ -1,5 +1,99 @@
 const revealScopes = document.querySelectorAll("[data-reveal]");
 
+const heroScene = document.querySelector(".hero-scene");
+if (heroScene && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const heroSection = heroScene.closest(".hero");
+  const bear = heroScene.querySelector(".hero-bear");
+  const lines = [...heroScene.querySelectorAll(".hero-words > span")];
+  const pause = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+  heroSection.classList.add("hero-scripted");
+
+  const animateHero = async () => {
+    await document.fonts.ready;
+    const sceneRect = heroScene.getBoundingClientRect();
+    const bearWidth = bear.getBoundingClientRect().width;
+    const firstLine = lines[0].getBoundingClientRect();
+    const writingTop = firstLine.top - sceneRect.top - bearWidth * .08;
+    const writingStart = firstLine.left - sceneRect.left - bearWidth * .13;
+    const entranceStart = sceneRect.width + bearWidth;
+
+    bear.classList.add("pose-step-a");
+    bear.style.left = `${entranceStart}px`;
+    bear.style.top = `${writingTop}px`;
+    bear.style.transition = "left 165ms ease-out, top 165ms ease-out";
+    await pause(80);
+    for (let step = 1; step <= 10; step++) {
+      bear.classList.toggle("pose-step-a", step % 2 === 0);
+      bear.classList.toggle("pose-step-b", step % 2 === 1);
+      bear.style.left = `${entranceStart + (writingStart - entranceStart) * step / 10}px`;
+      bear.style.top = `${writingTop + (step % 2 ? -5 : 3)}px`;
+      await pause(170);
+    }
+
+    bear.classList.remove("pose-step-a", "pose-step-b");
+    bear.classList.add("pose-writing");
+    bear.style.transition = "left 115ms ease-out, top 115ms ease-out, transform 115ms ease-out";
+    await pause(180);
+
+    const range = document.createRange();
+    for (const [lineIndex, line] of lines.entries()) {
+      const textNode = line.firstChild;
+      const lineRect = line.getBoundingClientRect();
+      for (let index = 0; index < textNode.length; index++) {
+        range.setStart(textNode, index);
+        range.setEnd(textNode, index + 1);
+        const letterRect = range.getBoundingClientRect();
+        const letter = textNode.textContent[index];
+        const visibleWidth = Math.min(lineRect.width, Math.max(0, letterRect.right - lineRect.left));
+        line.style.clipPath = `inset(0 ${Math.max(0, lineRect.width - visibleWidth)}px 0 0)`;
+        line.style.transition = "clip-path 105ms steps(3, end)";
+        bear.style.left = `${letterRect.right - sceneRect.left - bearWidth * .13}px`;
+        bear.style.top = `${letterRect.top - sceneRect.top - bearWidth * .08 + (index % 3 - 1) * 3}px`;
+        bear.style.transform = `rotate(${index % 2 ? 2 : -2}deg) translateY(${index % 3 - 1}px)`;
+        await pause(letter === "," || letter === "." ? 255 : letter === " " ? 65 : 115);
+      }
+      line.style.clipPath = "inset(0 0 0 0)";
+      if (lineIndex < lines.length - 1) {
+        bear.style.transform = "translateY(-12px) rotate(-4deg)";
+        await pause(150);
+        const nextRect = lines[lineIndex + 1].getBoundingClientRect();
+        bear.style.transition = "left 460ms cubic-bezier(.25, .75, .25, 1), top 460ms cubic-bezier(.25, .75, .25, 1), transform 460ms ease";
+        bear.style.left = `${nextRect.left - sceneRect.left - bearWidth * .13}px`;
+        bear.style.top = `${nextRect.top - sceneRect.top - bearWidth * .08}px`;
+        bear.style.transform = "rotate(0deg)";
+        await pause(480);
+        bear.style.transition = "left 115ms ease-out, top 115ms ease-out, transform 115ms ease-out";
+      }
+    }
+    range.detach();
+
+    const mobile = window.matchMedia("(max-width: 700px)").matches;
+    const finishLeft = mobile ? sceneRect.width * .59 : sceneRect.width * .73;
+    const finishTop = mobile ? 178 : sceneRect.height * -.06;
+    bear.style.transition = "left 450ms ease-in-out, top 450ms ease-in-out, transform 450ms ease-in-out";
+    bear.style.left = `${mobile ? sceneRect.width * .7 : sceneRect.width * .83}px`;
+    bear.style.top = `${mobile ? 145 : sceneRect.height * .28}px`;
+    bear.style.transform = "translateY(-15px) rotate(7deg)";
+    await pause(460);
+    bear.classList.remove("pose-writing");
+    bear.classList.add("pose-original");
+    bear.style.transition = "left 640ms cubic-bezier(.2, .75, .25, 1), top 640ms cubic-bezier(.2, .75, .25, 1), transform 640ms ease-out";
+    bear.style.left = `${finishLeft}px`;
+    bear.style.top = `${finishTop}px`;
+    bear.style.transform = "rotate(0deg)";
+  };
+
+  const startHero = () => animateHero().catch(() => heroSection.classList.remove("hero-scripted"));
+  if ("IntersectionObserver" in window) {
+    const heroObserver = new IntersectionObserver((entries, observer) => {
+      if (!entries[0].isIntersecting) return;
+      observer.disconnect();
+      startHero();
+    }, { threshold: .12 });
+    heroObserver.observe(heroScene);
+  } else startHero();
+}
+
 const caseJumpNav = document.querySelector(".case-jump-nav");
 if (caseJumpNav) {
   const jumpLinks = [...caseJumpNav.querySelectorAll('a[href^="#"]')];
