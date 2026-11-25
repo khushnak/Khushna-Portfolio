@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero animation preview · Khushna Kazi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --pink: #d56980; --cream: #fdfdf5; --ink: #3b3532; --muted: #8a817c; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100svh; background: var(--cream); color: var(--ink); font-family: "Nunito Sans", Arial, sans-serif; }
+    .preview-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px clamp(20px, 5vw, 70px); border-bottom: 1px solid #ece7de; }
+    .preview-bar p { margin: 0; color: var(--muted); font-size: 13px; }
+    .preview-bar button { border: 1px solid #d9b0b8; border-radius: 999px; padding: 8px 18px; color: var(--ink); background: white; font: 700 13px "Nunito Sans", Arial, sans-serif; cursor: pointer; }
+    .preview-bar button:hover { background: #ffeef2; }
+    main { padding: clamp(55px, 8vw, 100px) 18px 30px; text-align: center; }
+    h1 { margin: 0; color: var(--muted); font-size: clamp(18px, 1.5vw, 22px); font-weight: 600; }
+    h1 span { color: var(--pink); }
+    .scene { position: relative; width: min(88vw, 1100px); aspect-ratio: 1857 / 847; margin: clamp(70px, 9vw, 130px) auto 0; isolation: isolate; }
+    .cloud { display: block; width: 100%; height: 100%; object-fit: contain; transform-origin: 62% 44%; }
+    .words { position: absolute; top: 25%; left: 7%; width: 88%; margin: 0; color: var(--pink); font-family: Molle, cursive; font-size: clamp(35px, 5.6vw, 78px); font-style: italic; line-height: 1.12; transform-origin: 50% 53%; }
+    .words span { display: block; white-space: nowrap; }
+    .words span:last-child { font-size: .83em; }
+    .bear { position: absolute; z-index: 2; top: 1%; left: 61%; width: 15%; aspect-ratio: 663 / 608; pointer-events: none; }
+    .bear img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+    .bear .bear-head { opacity: 0; mask-image: radial-gradient(ellipse 35% 33% at 40% 28%, black 69%, transparent 98%); -webkit-mask-image: radial-gradient(ellipse 35% 33% at 40% 28%, black 69%, transparent 98%); transform-origin: 43% 46%; }
+    .question-mark { position: absolute; z-index: 3; top: -27%; left: 7%; color: #ba4862; font: italic 52px Molle, cursive; -webkit-text-stroke: .7px #ba4862; opacity: 0; transform: rotate(-14deg) scale(.3); }
+    .playing .bear-head-down { animation: bear-look-down 4.5s linear both; }
+    .playing .bear-head-front { animation: bear-look-front 4.5s linear both; }
+    .playing .question-mark { animation: bear-question 4.5s both; }
+    .playing .cloud { animation: cloud-tap 4.5s both; }
+    .playing .words { animation: cloud-words-pop 4.5s both; }
+    @keyframes bear-look-down {
+      0%, 12% { opacity: 0; transform: rotate(0deg); }
+      20%, 27% { opacity: 1; transform: rotate(-5deg); }
+      33%, 42% { opacity: 0; transform: rotate(0deg); }
+      48%, 73% { opacity: 1; transform: rotate(-4deg); }
+      85%, 100% { opacity: 0; transform: rotate(0deg); }
+    }
+    @keyframes bear-look-front {
+      0%, 27% { opacity: 0; transform: rotate(-5deg); }
+      34%, 42% { opacity: 1; transform: rotate(3deg); }
+      49%, 100% { opacity: 0; transform: rotate(-3deg); }
+    }
+    @keyframes bear-question {
+      0%, 29% { opacity: 0; transform: rotate(-14deg) scale(.3); }
+      34% { opacity: 1; transform: rotate(8deg) scale(1.22); }
+      38%, 44% { opacity: 1; transform: rotate(-6deg) scale(1); }
+      51%, 100% { opacity: 0; transform: rotate(-8deg) scale(.8); }
+    }
+    @keyframes cloud-tap {
+      0%, 48%, 55%, 100% { transform: translateY(0) scale(1); }
+      51% { transform: translateY(5px) scale(1.012, .985); }
+      53% { transform: translateY(-3px) scale(.995, 1.013); }
+    }
+    @keyframes cloud-words-pop {
+      0%, 53% { opacity: 0; transform: scale(.24); }
+      56% { opacity: 1; transform: scale(1.16); }
+      60% { opacity: 1; transform: scale(.88); }
+      63% { opacity: 1; transform: scale(1.075); }
+      66% { opacity: 1; transform: scale(.975); }
+      70%, 100% { opacity: 1; transform: scale(1); }
+    }
+    @media (max-width: 700px) {
+      main { padding-top: 65px; }
+      .scene { width: min(100%, 440px); margin-top: 105px; }
+      .words { top: 24%; font-size: clamp(17px, 5.7vw, 27px); }
+      .bear { width: 15%; top: -1%; left: 61%; }
+      .question-mark { font-size: 30px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .playing .bear-head, .playing .question-mark, .playing .cloud, .playing .words { animation: none; }
+      .words { opacity: 1; }
+      .bear-head, .question-mark { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-bar"><p>Hero animation preview</p><button type="button" id="replay">Replay animation</button></div>
+  <main>
+    <h1><span>Hello, I'm Khushna Kazi,</span> a UX Designer</h1>
+    <div class="scene playing" id="scene">
+      <img class="cloud" src="Assets/cloud_hero_blank.webp" alt="">
+      <p class="words" aria-label="Making things, noticing things, probably overthinking things.">
+        <span>Making things,</span><span>noticing things,</span><span>probably overthinking things.</span>
+      </p>
+      <div class="bear" aria-hidden="true">
+        <img class="bear-original" src="Assets/bear.png" alt="">
+        <img class="bear-head bear-head-down" src="Assets/bear-curious-preview.webp" alt="">
+        <img class="bear-head bear-head-front" src="Assets/bear-confused-preview.webp" alt="">
+        <span class="question-mark">?</span>
+      </div>
+    </div>
+  </main>
+  <script>
+    const scene = document.getElementById('scene');
+    document.getElementById('replay').addEventListener('click', () => {
+      scene.classList.remove('playing');
+      void scene.offsetWidth;
+      scene.classList.add('playing');
+    });
+  </script>
+</body>
+</html>

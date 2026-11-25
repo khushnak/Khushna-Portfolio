@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero video layout preview · Khushna Kazi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --green: #456242; --cream: #f8efdd; --pink: #e6bfd0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fdfdf5; font-family: "Nunito Sans", Arial, sans-serif; }
+    .preview-note { padding: 12px 24px; color: #5f5b53; font-size: 13px; text-align: center; }
+    .hero { position: relative; display: grid; grid-template-columns: 1.13fr .87fr; align-items: center; width: min(100%, 1500px); min-height: 790px; margin: 0 auto; padding: 78px clamp(30px, 7vw, 105px); overflow: hidden; background: var(--green); color: var(--cream); }
+    .hero-copy { position: relative; z-index: 2; padding-bottom: 20px; }
+    h1 { margin: 0; font: italic clamp(64px, 6.2vw, 98px)/1.26 Molle, cursive; letter-spacing: -.025em; }
+    h1 span { display: block; white-space: nowrap; }
+    .hero-visual { position: relative; width: min(100%, 650px); aspect-ratio: 1604 / 1503; justify-self: end; z-index: 2; }
+    .frame-art { position: absolute; inset: 0; z-index: 1; display: block; width: 100%; height: 100%; pointer-events: none; }
+    .frame-jam-front { z-index: 4; clip-path: polygon(8% 73%, 9% 69%, 12% 66%, 16% 65%, 19% 68%, 22% 72%, 23% 77%, 22% 81%, 19% 84%, 13% 84%, 9% 81%, 8% 76%); }
+    .frame-window { position: absolute; z-index: 2; left: 18.7%; top: 21.7%; width: 71.8%; height: 62%; overflow: hidden; background: #f9f7f3; }
+    .yellow-star { position: absolute; left: 14%; top: 8%; width: 72%; height: auto; opacity: .42; }
+    .character { position: absolute; left: 50%; bottom: -2%; display: block; width: auto; height: 100%; max-width: 95%; object-fit: contain; transform: translateX(-50%); opacity: 0; transition: opacity .2s ease; }
+    .character.is-active { opacity: 1; }
+    .reaction-tray { position: absolute; z-index: 3; top: 22%; right: 5%; display: flex; align-items: center; gap: 6px; padding: 6px 9px; border-radius: 999px; background: #fffdfb; box-shadow: 0 5px 12px #493c3c29; transform: rotate(-3deg); }
+    .reaction-tray span { display: block; font-size: clamp(13px, 1.15vw, 18px); line-height: 1; }
+    .role-message { position: absolute; z-index: 3; top: 6%; right: 5%; max-width: 50%; padding: 11px 16px; border-radius: 18px 18px 5px 18px; background: #fff9f8; box-shadow: 0 4px 10px #493c3c24; color: #3b3532; font-size: clamp(10px, .96vw, 14px); font-weight: 800; white-space: nowrap; transform: rotate(-2deg); }
+    .role-message::after { content: ""; position: absolute; right: 0; bottom: -8px; width: 13px; height: 11px; background: #fff9f8; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+    .role-doodle { position: absolute; z-index: 4; left: 27%; bottom: 20%; width: clamp(50px, 5.4vw, 74px); height: auto; overflow: visible; transform: rotate(-13deg); pointer-events: none; opacity: 0; transition: opacity .18s ease; }
+    .role-doodle.is-active { opacity: 1; }
+    .role-doodle .ink { fill: none; stroke: #3b3532; stroke-linecap: round; stroke-linejoin: round; }
+    .role-doodle .dot { fill: #3b3532; }
+    .bunny-doodle { width: clamp(48px, 5vw, 69px); transform: rotate(9deg); }
+    .sparkle-doodle { width: clamp(50px, 5.3vw, 72px); transform: rotate(-9deg); }
+    .small-star { position: absolute; width: clamp(25px, 3.8vw, 49px); height: auto; opacity: .95; pointer-events: none; }
+    .star-one { left: 8%; top: 18%; transform: rotate(-11deg); }
+    .star-two { left: 52%; top: 31%; width: 35px; transform: rotate(14deg); }
+    .star-three { right: 7%; top: 17%; width: 34px; transform: rotate(12deg); }
+    .star-four { left: 16%; bottom: 12%; width: 30px; transform: rotate(-8deg); }
+    .star-five { right: 6%; bottom: 13%; width: 75px; transform: rotate(9deg); }
+    .star-six { left: calc(42% - 56px); top: 13%; width: 35px; transform: rotate(-9deg); }
+    @media (min-width: 1101px) {
+      .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+      .hero-visual { transform: translateX(24px); }
+    }
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 70px 24px 42px; min-height: 0; }
+      .hero-copy { text-align: center; }
+      h1 { font-size: clamp(49px, 10vw, 74px); }
+      .hero-visual { width: min(100%, 520px); justify-self: center; }
+      .reaction-tray { top: 25%; gap: 3px; padding: 5px 7px; }
+      .role-message { padding: 8px 11px; }
+      .star-two { left: 7%; top: 44%; }
+      .star-four { left: 8%; bottom: 9%; }
+      .star-five { right: 5%; bottom: 8%; width: 52px; }
+      .star-six { left: 52%; top: 6%; width: 22px; }
+      .role-doodle { left: 27%; bottom: 20%; width: 52px; }
+      .bunny-doodle { width: 49px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .character, .role-doodle { transition: none; } }
+  </style>
+</head>
+<body>
+  <div class="preview-note">Local hero preview · the portfolio page is unchanged</div>
+  <main class="hero">
+    <img class="small-star star-one" src="Assets/yellow star embroidery-transparent.png" alt="">
+    <img class="small-star star-two" src="Assets/yellow star embroidery-transparent.png" alt="">
+    <img class="small-star star-three" src="Assets/yellow star embroidery-transparent.png" alt="">
+    <img class="small-star star-four" src="Assets/yellow star embroidery-transparent.png" alt="">
+    <img class="small-star star-five" src="Assets/yellow star embroidery-transparent.png" alt="">
+    <img class="small-star star-six" src="Assets/yellow star embroidery-transparent.png" alt="">
+    <div class="hero-copy">
+      <h1><span>Hello! I’m</span><span>Khushna Kazi</span></h1>
+    </div>
+    <div class="hero-visual">
+      <div class="frame-window" aria-hidden="true">
+        <img class="yellow-star" src="Assets/Yellow-Star-transparent.png" alt="">
+        <img class="character is-active" src="Assets/UXDesigner-cutout.webp" alt="">
+        <img class="character" src="Assets/Creative-cutout.webp" alt="">
+        <img class="character" src="Assets/Cutie-cutout.webp" alt="">
+        <span class="reaction-tray" id="reaction-tray"><span>✏️</span><span>📐</span><span>🎨</span><span>✨</span></span>
+        <span class="role-message"><span>A </span><span id="role-word">UX Designer</span></span>
+      </div>
+      <img class="frame-art" src="Assets/Frame.png" alt="">
+      <img class="frame-art frame-jam-front" src="Assets/Frame.png" alt="" aria-hidden="true">
+      <svg class="role-doodle bow-doodle is-active" viewBox="0 0 120 145" aria-hidden="true">
+        <path class="ink" stroke-width="4" d="M58 48 C42 26 21 25 17 37 C10 53 30 66 56 53 M64 47 C84 26 102 30 103 43 C105 58 85 65 65 54"/>
+        <path class="ink" stroke-width="3.4" d="M55 55 C43 74 25 91 28 111 C30 119 37 121 42 114 M65 55 C75 73 91 91 87 107 C84 115 79 114 77 109"/>
+        <path class="ink" stroke-width="3" d="M56 48 C58 44 63 45 66 49 C68 53 65 57 61 57 C56 57 54 53 56 48 Z"/>
+        <path class="ink" stroke-width="1.9" d="M37 17 L37 29 M31 23 L43 23 M96 13 L96 24 M90 18 L102 18 M105 76 L105 88 M99 82 L111 82"/>
+        <circle class="dot" cx="15" cy="75" r="2.5"/><circle class="dot" cx="108" cy="40" r="2"/><circle class="dot" cx="8" cy="30" r="1.7"/>
+      </svg>
+      <svg class="role-doodle sparkle-doodle" viewBox="0 0 120 145" aria-hidden="true">
+        <path class="ink" stroke-width="3.4" d="M57 24 Q60 53 65 61 Q72 67 95 71 Q70 75 65 84 Q60 93 57 121 Q53 94 47 85 Q39 78 16 72 Q40 68 47 60 Q53 52 57 24 Z"/>
+        <path class="ink" stroke-width="2.8" d="M25 18 Q27 28 37 31 Q27 33 25 43 Q23 33 13 31 Q23 29 25 18 Z M98 21 Q100 34 113 37 Q100 40 98 53 Q96 40 83 37 Q96 34 98 21 Z"/>
+        <circle class="dot" cx="14" cy="95" r="2.6"/><circle class="dot" cx="104" cy="107" r="2.5"/><circle class="dot" cx="103" cy="13" r="2"/>
+      </svg>
+      <svg class="role-doodle bunny-doodle" viewBox="0 0 120 145" aria-hidden="true">
+        <path class="ink" stroke-width="4.1" d="M41 54 C36 44 33 22 37 14 C41 6 50 10 54 17 C58 24 58 38 60 46 C62 35 65 16 72 12 C80 7 87 11 88 20 C89 33 82 48 78 56 C91 65 97 79 96 95 C95 115 81 126 60 127 C37 128 22 114 22 94 C22 78 28 65 41 54 Z"/>
+        <circle class="dot" cx="42" cy="91" r="3.6"/><circle class="dot" cx="77" cy="91" r="3.6"/>
+        <path class="ink" stroke-width="2.8" d="M55 106 L60 110 L65 106 M60 110 L55 116 M60 110 L65 116"/>
+      </svg>
+    </div>
+  </main>
+  <script>
+    const roles = ['UX Designer', 'Creative', 'Cutie'];
+    const reactions = [
+      ['✏️', '📐', '🎨', '✨'],
+      ['💡', '🖌️', '🎨', '✨'],
+      ['🎀', '💗', '🧸', '🌸']
+    ];
+    const characters = [...document.querySelectorAll('.character')];
+    const doodles = [...document.querySelectorAll('.role-doodle')];
+    const roleWord = document.getElementById('role-word');
+    const reactionTray = document.getElementById('reaction-tray');
+    let current = 0;
+    setInterval(() => {
+      characters[current].classList.remove('is-active');
+      doodles[current].classList.remove('is-active');
+      current = (current + 1) % roles.length;
+      roleWord.textContent = roles[current];
+      reactionTray.replaceChildren(...reactions[current].map((emoji) => {
+        const span = document.createElement('span');
+        span.textContent = emoji;
+        return span;
+      }));
+      characters[current].classList.add('is-active');
+      doodles[current].classList.add('is-active');
+    }, 3200);
+  </script>
+</body>
+</html>

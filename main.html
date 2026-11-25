@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261123-7">
-    <script src="script.js?v=20261123-4" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261125-4">
+    <script src="script.js?v=20261125-2" defer></script>
   </head>
   <body class="page-home">
     <header class="site-header mobile-header">
@@ -34,26 +34,45 @@
 
     <main>
       <section class="hero reveal-scope" id="home" data-reveal aria-labelledby="hero-title">
-        <h1 class="hero-intro reveal-from-top" id="hero-title"><span>Hello, I'm Khushna Kazi,</span> a UX Designer</h1>
-        <div class="hero-scene">
-          <img class="hero-cloud" src="Assets/cloud_hero_blank.webp" alt="" width="1857" height="847" fetchpriority="high">
-          <p class="hero-words" aria-label="Making things, noticing things, probably overthinking things.">
-            <span>Making things,</span>
-            <span>noticing things,</span>
-            <span>probably overthinking things.</span>
-          </p>
-          <div class="hero-bear" aria-hidden="true">
-            <img class="hero-bear-step hero-bear-step-a" src="Assets/bear-enter.webp" alt="" width="1199" height="1312" fetchpriority="high">
-            <img class="hero-bear-step hero-bear-step-b" src="Assets/bear-enter-alt.webp" alt="" width="1116" height="1316" fetchpriority="high">
-            <img class="hero-bear-writing" src="Assets/bear-write.webp" alt="" width="1132" height="1389" fetchpriority="high">
-            <img class="hero-bear-original" src="Assets/bear.png" alt="" width="652" height="604" fetchpriority="high">
-          </div>
+        <img class="star hero-star small-star star-one" style="--star-delay:.58s" width="256" height="244" src="Assets/yellow star embroidery-transparent.png" alt="">
+        <img class="star hero-star small-star star-two" style="--star-delay:.88s" width="256" height="244" src="Assets/yellow star embroidery-transparent.png" alt="">
+        <img class="star hero-star small-star star-three" style="--star-delay:1.18s" width="256" height="244" src="Assets/yellow star embroidery-transparent.png" alt="">
+        <img class="star hero-star small-star star-four" style="--star-delay:1.48s" width="256" height="244" src="Assets/yellow star embroidery-transparent.png" alt="">
+        <img class="star hero-star small-star star-five" style="--star-delay:1.78s" width="256" height="244" src="Assets/yellow star embroidery-transparent.png" alt="">
+        <img class="star hero-star small-star star-six" style="--star-delay:2.08s" width="256" height="244" src="Assets/yellow star embroidery-transparent.png" alt="">
+        <div class="hero-copy">
+          <h1 id="hero-title"><span>Hello! I’m</span><span>Khushna Kazi</span></h1>
+          <p class="visually-hidden">UX designer</p>
         </div>
-        <img class="star hero-star star-1" src="Assets/star.png" alt="" style="--star-delay:.58s" width="256" height="244">
-        <img class="star hero-star star-2" src="Assets/star.png" alt="" style="--star-delay:.88s" width="256" height="244">
-        <img class="star hero-star star-3" src="Assets/star.png" alt="" style="--star-delay:1.18s" width="256" height="244">
-        <img class="star hero-star star-4" src="Assets/star.png" alt="" style="--star-delay:1.48s" width="256" height="244">
-        <img class="star hero-star star-5" src="Assets/star.png" alt="" style="--star-delay:1.78s" width="256" height="244">
+        <div class="hero-visual">
+          <div class="frame-window" aria-hidden="true">
+            <img class="yellow-star" src="Assets/Yellow-Star-transparent.png" alt="">
+            <img class="character is-active" src="Assets/UXDesigner-cutout.webp" alt="">
+            <img class="character" src="Assets/Creative-cutout.webp" alt="">
+            <img class="character" src="Assets/Cutie-cutout.webp" alt="">
+            <span class="reaction-tray" id="reaction-tray"><span>✏️</span><span>📐</span><span>🎨</span><span>✨</span></span>
+            <span class="role-message"><span>A </span><span id="role-word">UX Designer</span></span>
+          </div>
+          <img class="frame-art" src="Assets/Frame.png" alt="">
+          <img class="frame-art frame-jam-front" src="Assets/Frame.png" alt="" aria-hidden="true">
+          <svg class="role-doodle bow-doodle is-active" viewBox="0 0 120 145" aria-hidden="true">
+            <path class="ink" stroke-width="4" d="M58 48 C42 26 21 25 17 37 C10 53 30 66 56 53 M64 47 C84 26 102 30 103 43 C105 58 85 65 65 54"/>
+            <path class="ink" stroke-width="3.4" d="M55 55 C43 74 25 91 28 111 C30 119 37 121 42 114 M65 55 C75 73 91 91 87 107 C84 115 79 114 77 109"/>
+            <path class="ink" stroke-width="3" d="M56 48 C58 44 63 45 66 49 C68 53 65 57 61 57 C56 57 54 53 56 48 Z"/>
+            <path class="ink" stroke-width="1.9" d="M37 17 L37 29 M31 23 L43 23 M96 13 L96 24 M90 18 L102 18 M105 76 L105 88 M99 82 L111 82"/>
+            <circle class="dot" cx="15" cy="75" r="2.5"/><circle class="dot" cx="108" cy="40" r="2"/><circle class="dot" cx="8" cy="30" r="1.7"/>
+          </svg>
+          <svg class="role-doodle sparkle-doodle" viewBox="0 0 120 145" aria-hidden="true">
+            <path class="ink" stroke-width="3.4" d="M57 24 Q60 53 65 61 Q72 67 95 71 Q70 75 65 84 Q60 93 57 121 Q53 94 47 85 Q39 78 16 72 Q40 68 47 60 Q53 52 57 24 Z"/>
+            <path class="ink" stroke-width="2.8" d="M25 18 Q27 28 37 31 Q27 33 25 43 Q23 33 13 31 Q23 29 25 18 Z M98 21 Q100 34 113 37 Q100 40 98 53 Q96 40 83 37 Q96 34 98 21 Z"/>
+            <circle class="dot" cx="14" cy="95" r="2.6"/><circle class="dot" cx="104" cy="107" r="2.5"/><circle class="dot" cx="103" cy="13" r="2"/>
+          </svg>
+          <svg class="role-doodle bunny-doodle" viewBox="0 0 120 145" aria-hidden="true">
+            <path class="ink" stroke-width="4.1" d="M41 54 C36 44 33 22 37 14 C41 6 50 10 54 17 C58 24 58 38 60 46 C62 35 65 16 72 12 C80 7 87 11 88 20 C89 33 82 48 78 56 C91 65 97 79 96 95 C95 115 81 126 60 127 C37 128 22 114 22 94 C22 78 28 65 41 54 Z"/>
+            <circle class="dot" cx="42" cy="91" r="3.6"/><circle class="dot" cx="77" cy="91" r="3.6"/>
+            <path class="ink" stroke-width="2.8" d="M55 106 L60 110 L65 106 M60 110 L55 116 M60 110 L65 116"/>
+          </svg>
+        </div>
       </section>
 
       <section class="featured-projects reveal-scope" id="featured-projects" data-reveal aria-labelledby="featured-title">
@@ -78,9 +97,9 @@
               <img src="Assets/web/chakli.webp" alt="Scrapbook preview of a redesigned traditional chakli maker" width="2000" height="1166" loading="lazy">
               <a class="case-link" href="chakli.html" tabindex="-1">Read the case study <span aria-hidden="true">→</span></a>
             </article>
-            <button class="book-turn book-turn-prev" type="button" data-book-prev aria-label="Previous project"><span aria-hidden="true">‹</span></button>
             <button class="book-turn book-turn-next" type="button" data-book-next aria-label="Flip to the next project"><span aria-hidden="true">→</span></button>
           </div>
+          <button class="book-turn book-turn-prev" type="button" data-book-prev aria-label="Return to the scrapbook cover"></button>
           <div class="page-flip" data-page-flip aria-hidden="true">
             <img class="page-flip-front" src="Assets/web/sm.webp" alt="" width="2000" height="1166">
             <div class="page-flip-back"></div>
