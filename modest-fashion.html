@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#EDE6D8">
+    <meta name="description" content="Khushna Kazi's ongoing UX research into discovering contemporary modest fashion across stores and online platforms.">
+    <title>Making Modest Fashion Easier to Find — Khushna Kazi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261126-6">
+    <link rel="stylesheet" href="modest-fashion.css?v=20261126-6">
+    <script src="script.js?v=20261126-1" defer></script>
+  </head>
+  <body class="page-modest">
+    <header class="site-header mobile-header">
+      <a class="brand" href="main.html" aria-label="Khushna Kazi, home"><img src="Assets/logo.png" alt="" width="920" height="1080"></a>
+      <button class="mobile-menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="mobile-nav" aria-label="Main navigation">
+        <a class="nav-link" href="main.html">Home</a>
+        <a class="nav-link is-current" href="projects.html">Projects</a>
+        <a class="nav-link" href="main.html#about">About Me</a>
+        <a class="contact-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khushna.kazi%40gmail.com" target="_blank" rel="noopener noreferrer">Contact Me <img src="Assets/strawberry.png" alt="" width="268" height="387"></a>
+      </nav>
+    </header>
+
+    <main>
+      <a class="mf-back" href="projects.html"><span aria-hidden="true">←</span> All projects</a>
+      <nav class="case-jump-nav" aria-label="Jump to modest fashion case study section">
+        <div class="case-jump-links">
+          <a href="#mf-overview">Overview</a>
+          <a href="#mf-research">Research</a>
+          <a href="#mf-journey">Huma’s journey</a>
+          <a href="#mf-synthesis">Insights</a>
+          <a href="#mf-ideas">Ideas</a>
+          <a href="#mf-system">How it works</a>
+          <a href="#mf-next">Next steps</a>
+        </div>
+        <a class="case-jump-final" href="#mf-concept">Proposed concept <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <article class="mf-case">
+        <header class="mf-hero mf-section" id="mf-overview">
+          <div class="mf-hero-copy">
+            <p class="mf-eyebrow">UX research · Concept in progress</p>
+            <h1>Finding modest clothes should not require searching every rack and every website.</h1>
+            <p class="mf-lede">I’m exploring how a shopping assistant could help people find contemporary modest tops across nearby mainstream stores and online platforms, based on their own coverage, style, size, and budget preferences.</p>
+          </div>
+          <div class="mf-hero-panel" aria-label="Project status: proposed agentic AI shopping assistant">
+            <span class="mf-panel-mark" aria-hidden="true">✳</span>
+            <p>Research → reframe → proposed concept</p>
+            <strong>Find what fits your preferences.</strong>
+            <small>Concept in progress</small>
+          </div>
+        </header>
+
+        <section class="mf-overview mf-section" aria-labelledby="mf-overview-title">
+          <p class="mf-eyebrow">At a glance</p>
+          <h2 id="mf-overview-title">The project overview.</h2>
+          <dl class="mf-overview-meta">
+            <div><dt>My role</dt><dd>Literature review, survey analysis, store audits, journey mapping, concept exploration, feature mapping, data flow, and information architecture.</dd></div>
+            <div><dt>Status</dt><dd>Concept in progress</dd></div>
+          </dl>
+          <div class="mf-overview-timeline" aria-label="Project progression from research through concept development; durations are not specified">
+            <h3>Project progression</h3>
+            <ol><li><span>01</span>Literature review</li><li><span>02</span>Primary research</li><li><span>03</span>Synthesis</li><li><span>04</span>Concept development</li></ol>
+          </div>
+          <div class="mf-overview-cards">
+            <div><h3>The problem</h3><p>Suitable pieces may exist, but shoppers still have to find them across stores and sites, assess missing details, and imagine how to wear them.</p></div>
+            <div><h3>What I did</h3><p>I studied how shoppers define coverage, where they look for clothes, and what makes suitable options difficult to find. I translated those findings into a proposed shopping assistant and information architecture.</p></div>
+          </div>
+          <p class="mf-overview-outcome"><strong>Current outcome</strong> A proposed agentic AI shopping assistant, feature map, data-flow diagram, and information architecture. The concept has not been tested or launched.</p>
+        </section>
+
+        <section class="mf-origin mf-section" aria-labelledby="mf-origin-title">
+          <div class="mf-section-intro"><p class="mf-eyebrow">01 / Where the question began</p><h2 id="mf-origin-title">A problem I kept seeing close to home.</h2></div>
+          <div class="mf-origin-layout">
+            <p>My sister and people around me had difficulty finding modest clothes they liked. I began by asking whether the options were missing because few people wanted them, and whether modest clothing was uncommon in India.</p>
+            <div class="mf-question-stack" aria-label="Starting questions, not conclusions"><span>Is there enough demand?</span><span>Is modest clothing uncommon in India?</span><small>Starting questions, not conclusions</small></div>
+          </div>
+        </section>
+
+        <section class="mf-literature mf-section" aria-labelledby="mf-literature-title">
+          <p class="mf-eyebrow">02 / Literature review</p>
+          <h2 id="mf-literature-title">A wider lens on modest fashion.</h2>
+          <p class="mf-measure">Before defining a solution, I reviewed writing on modest fashion and clothing choice. Much of the research I collected focuses on Muslim consumers, while the wider reading also pointed to comfort, fit, culture, and personal preference. I treated modest fashion as individual clothing preferences rather than one identity or one fixed silhouette.</p>
+          <div class="mf-literature-themes" aria-label="Two themes highlighted from the literature review">
+            <article><span>Theme A</span><h3>Reasons for dressing modestly differ by context</h3><p>The reviewed papers discuss faith alongside social expectations, safety, and the wish to keep a modern personal style. I could not assume one motivation for every shopper.</p></article>
+            <article><span>Theme B</span><h3>Physical shopping still matters, but searching takes work</h3><p>Fit and comfort give shoppers reasons to visit stores. The literature also describes the effort of finding and assembling suitable pieces across the physical shopping journey.</p></article>
+          </div>
+          <div class="mf-reading"><h3>Selected reading on my research board</h3><p><cite>Advancing Muslim Modest Fashion Clothing: Impact on Consumer Behavior and Challenges for Young Female Muslim Influencers</cite> · <cite>Fashion innovativeness in India: shopping behaviour, clothing evaluation and fashion information sources</cite> · <cite>A Fine Balance: Negotiating fashion and respectable femininity in middle-class Hyderabad, India</cite></p></div>
+          <div class="mf-literature-gap"><span>Gap 1 · the direction I took forward</span><p>Research shows that modest fashion is a growing market and that consumers have different reasons for choosing more-covered clothing. However, there is limited research on how mainstream Indian fashion retailers currently cater to these consumers, particularly through product assortment, organisation, and accessibility in physical stores.</p></div>
+          <aside class="mf-definition" aria-labelledby="mf-definition-title">
+            <div><p class="mf-eyebrow">Side note / An important distinction</p><h3 id="mf-definition-title">What “modest clothing” means here</h3><p>Some of the reviewed papers may consider these forms of modest dressing:</p><ul><li>salwar kameez</li><li>kurtas</li><li>dupattas</li><li>longer traditional silhouettes</li><li>clothing considered socially appropriate in that cultural context</li></ul></div>
+            <div><p>In this project, I mean clothing that offers greater body coverage through:</p><ul><li>longer hemlines</li><li>full or long sleeves</li><li>higher necklines</li><li>less revealing cuts</li><li>non-cropped tops</li><li>fuller or looser silhouettes, where preferred</li><li>layer-friendly designs</li></ul><p>The definition is not tied to a religion, culture, or one silhouette.</p></div>
+          </aside>
+          <figure class="mf-moodboard"><div class="mf-moodboard-placeholder" role="img" aria-label="Placeholder for the modest fashion moodboard to be added later"><span>Moodboard placeholder</span><small>Contemporary modest clothing · imagery to be supplied</small></div><figcaption>Visual direction: the range of contemporary, more-covered clothing considered in this project.</figcaption></figure>
+        </section>
+
+        <section class="mf-audience mf-section" aria-labelledby="mf-audience-title">
+          <p class="mf-eyebrow">03 / Narrowing the focus</p><h2 id="mf-audience-title">Who was I researching for?</h2><p class="mf-measure">I narrowed this project to younger shoppers looking for contemporary, more-covered clothing, including everyday and workwear. The focus was on the garment features and shopping experience they wanted, rather than assuming that “modest” meant traditional or faith-based clothing.</p><p class="mf-caption">The later survey sample was concentrated among 18–25-year-olds and students; it should not be read as representative of all shoppers.</p>
+        </section>
+
+        <section class="mf-research mf-section" id="mf-research" aria-labelledby="mf-research-title">
+          <p class="mf-eyebrow">04 / Research approach</p>
+          <h2 id="mf-research-title">Following the search across channels.</h2>
+          <div class="mf-methods"><div><strong>43</strong><span>survey respondents; some questions had 40 valid answers</span></div><div><strong>04</strong><span>store audits: Westside, Lifestyle, Max, Trends</span></div><div><strong>↗</strong><span>qualitative interview work and analysis</span></div><div><strong>↗</strong><span>online shopping review and discussion of workarounds</span></div></div>
+          <p class="mf-scope">The survey leaned heavily toward younger respondents and students. These findings describe this sample, not all shoppers in India. The final interview count still needs confirmation.</p>
+        </section>
+
+        <section class="mf-findings mf-section" aria-labelledby="mf-findings-title">
+          <p class="mf-eyebrow">05 / What the research revealed</p>
+          <h2 id="mf-findings-title">The difficulty was often finding and assessing what was there.</h2>
+          <div class="mf-finding-themes">
+            <article><span>01 / What coverage means</span><h3>More than one silhouette</h3><p>Respondents described coverage through garment features and chose more-covered clothes for overlapping reasons. Among 40 valid responses, 85% selected personal comfort or preference and 60% selected religion or spirituality.</p></article>
+            <article><span>02 / Where they shop</span><h3>Across channels and sections</h3><p>Mainstream stores were the most common single shopping option in the survey. When asked where they find suitable clothes in stores, 12 respondents chose regular women’s sections and 12 chose pieces scattered across sections; only 2 chose a dedicated section.</p></article>
+            <article><span>03 / Why it is difficult</span><h3>Discovery and variety</h3><p>17 of 40 rated the search difficult or very difficult. A lack of a designated section and limited style variety were the two most reported challenges, echoed by the store audits.</p></article>
+          </div>
+          <div class="mf-stat-grid">
+            <div><strong>40 / 43</strong><p>chose more-covered styles regularly or occasionally.</p></div>
+            <div><strong>85%</strong><p>of 40 valid responses selected personal comfort or preference as a reason.</p></div>
+            <div><strong>60%</strong><p>of 40 valid responses selected religion or spirituality. Respondents could choose more than one reason.</p></div>
+            <div><strong>17 / 40</strong><p>(42.5%) rated finding modest clothing in mainstream Indian retail difficult or very difficult.</p></div>
+            <div><strong>29 / 40</strong><p>(72.5%) reported a lack of a designated section.</p></div>
+            <div><strong>27 / 40</strong><p>(67.5%) reported limited style variety.</p></div>
+          </div>
+          <div class="mf-audit"><h3>What the store audits added</h3><p>Potentially suitable pieces could be scattered across sections. A promising garment might still have a lower neckline, shorter length, thin fabric, or need another layer. A garment existing is different from a shopper being able to find and confidently choose it.</p></div>
+        </section>
+
+        <section class="mf-reframe mf-section" aria-labelledby="mf-reframe-title">
+          <p class="mf-eyebrow">The research reframe</p>
+          <p class="mf-old-question">I began with: “Is there enough modest clothing?”</p>
+          <h2 id="mf-reframe-title">When suitable clothing exists, how easily can shoppers find it, assess it against their own preferences, and put an outfit together?</h2>
+        </section>
+
+        <section class="mf-huma mf-section" aria-labelledby="mf-huma-title">
+          <div><p class="mf-eyebrow">06 / Meet Huma</p><h2 id="mf-huma-title">One top. Many decisions.</h2><p>Huma is a 21-year-old student intern in Mumbai who likes stylish, trendy, more-covered clothes. She wants a longer, full-sleeved top to wear with her formal trousers and prefers to check fit and fabric herself.</p><blockquote>“I’m looking for a top for my internship. I want it to feel like me, and I want to make the final choice.”</blockquote><p class="mf-caption">Huma’s journey is a reconstructed scenario based on the research, not a transcript of one shopping trip.</p></div>
+          <div class="mf-huma-placeholder" role="img" aria-label="Placeholder for the Bratz image the designer will supply"><span>Huma’s character visual</span><small>Bratz image to be added</small></div>
+        </section>
+
+        <section class="mf-journey mf-section" id="mf-journey" aria-labelledby="mf-journey-title">
+          <p class="mf-eyebrow">07 / Walk with Huma</p><h2 id="mf-journey-title">From a store rack to another browser tab.</h2><p class="mf-journey-note">Her narration paraphrases the journey map. The compact strip beneath each scene records the UX observation.</p>
+          <h3 class="mf-journey-phase">Physical stores</h3>
+          <div class="mf-journey-track">
+            <article class="mf-scene"><span class="mf-scene-number">01</span><p class="mf-scene-voice">“I need a stylish, longer, full-sleeved top for my internship trousers.”</p><div class="mf-scene-art mf-art-need" aria-hidden="true"><span>top</span><span>trousers</span></div><h4>The need</h4><p class="mf-scene-meta">Look for a top · Outfit planning · Preferences to satisfy · Excited</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">02</span><p class="mf-scene-voice">“I’ll check the nearby mainstream stores and their current collections.”</p><div class="mf-scene-art mf-art-stores" aria-hidden="true"><span>Westside</span><span>Zudio</span></div><h4>Choosing where to go</h4><p class="mf-scene-meta">Choose stores · Nearby locations · Availability unclear · Curious, nervous</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">03</span><p class="mf-scene-voice">“I see pieces I like, but their coverage details keep changing.”</p><div class="mf-scene-art mf-art-racks" aria-hidden="true"><span>▯</span><span>▯</span><span>▯</span></div><h4>Searching the racks</h4><p class="mf-scene-meta">Browse racks · Westside and Zudio · Pieces dispersed · Tired, frustrated</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">04</span><p class="mf-scene-voice">“This top looks promising. Now I need to check the neckline, fabric, fit, and cost.”</p><div class="mf-scene-art mf-art-check" aria-hidden="true"><span>length</span><span>fabric</span><span>fit</span></div><h4>Assessing and trying</h4><p class="mf-scene-meta">Try options · Garment and changing room · One detail can rule it out · Disappointed</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">05</span><p class="mf-scene-voice">“I’ll take a formal shirt, then keep looking online for the style I wanted.”</p><div class="mf-scene-art mf-art-fallback" aria-hidden="true"><span>store</span><span>→ online</span></div><h4>The fallback</h4><p class="mf-scene-meta">Compromise and continue · Store to web · Search begins again · Disappointed</p></article>
+          </div>
+          <div class="mf-journey-bridge" aria-hidden="true">The same search continues online <span>↓</span></div>
+          <h3 class="mf-journey-phase">Online</h3>
+          <div class="mf-journey-track">
+            <article class="mf-scene"><span class="mf-scene-number">06</span><p class="mf-scene-voice">“Maybe I’ll find more options online.”</p><div class="mf-scene-art mf-art-online" aria-hidden="true"><span>site 1</span><span>site 2</span></div><h4>Starting again</h4><p class="mf-scene-meta">Open platforms · Online sites · Too many starting points · Curious, overwhelmed</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">07</span><p class="mf-scene-voice">“I’m going through so many products, but the filters miss the details that matter to me.”</p><div class="mf-scene-art mf-art-filters" aria-hidden="true"><span>filter</span><span>?</span></div><h4>Filtering and browsing</h4><p class="mf-scene-meta">Browse products · Search filters · Coverage is hard to specify · Tired</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">08</span><p class="mf-scene-voice">“This one might be sheer, and another needs a layer that stretches my budget.”</p><div class="mf-scene-art mf-art-matches" aria-hidden="true"><span>near match</span><span>?</span></div><h4>Assessing near matches</h4><p class="mf-scene-meta">Check details · Product page · Opacity, fit, cost uncertain · Frustrated</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">09</span><p class="mf-scene-voice">“I’ll save a few and compare how they might work with my trousers.”</p><div class="mf-scene-art mf-art-save" aria-hidden="true"><span>♡</span><span>compare</span></div><h4>Saving and deciding</h4><p class="mf-scene-meta">Compare finds · Saved items and policies · Mental outfit building · Cautious</p></article>
+            <article class="mf-scene"><span class="mf-scene-number">10</span><p class="mf-scene-voice">“After trying them with my outfit, I may still have to return some.”</p><div class="mf-scene-art mf-art-return" aria-hidden="true"><span>try</span><span>return</span></div><h4>After ordering</h4><p class="mf-scene-meta">Try and return · Home and retailer · Time spent, compromises remain · Disappointed</p></article>
+          </div>
+          <p class="mf-handoff">“That’s what finding one top can take for me. Khushna, I’ll let you show what you learned from it.” <small>Case study narration</small></p>
+        </section>
+
+        <section class="mf-synthesis mf-section" id="mf-synthesis" aria-labelledby="mf-synthesis-title">
+          <p class="mf-eyebrow">08 / What the journey clarified</p><h2 id="mf-synthesis-title">Translate the friction into design requirements.</h2>
+          <div class="mf-requirement-list"><div><span>01</span><p>Pieces are dispersed across stores, racks, and sites.</p><strong>Search across multiple sources from one starting point.</strong></div><div><span>02</span><p>“Modest” means different things to different shoppers.</p><strong>Let people specify coverage, fit, fabric, size, style, and budget.</strong></div><div><span>03</span><p>One missing detail can rule out a top.</p><strong>Separate essential preferences from flexible ones.</strong></div><div><span>04</span><p>Images and descriptions may not confirm opacity or fit.</p><strong>Show uncertainty and let shoppers check.</strong></div><div><span>05</span><p>In-store availability is uncertain.</p><strong>Offer a branch check where a store participates.</strong></div><div><span>06</span><p>Shoppers mentally combine pieces and layers.</p><strong>Help them save finds and build outfits.</strong></div></div>
+        </section>
+
+        <section class="mf-ideas mf-section" id="mf-ideas" aria-labelledby="mf-ideas-title">
+          <p class="mf-eyebrow">09 / Initial idea exploration</p><h2 id="mf-ideas-title">Five ways I considered helping shoppers.</h2><p class="mf-measure">These were directions I explored, not tested concepts.</p>
+          <ol class="mf-idea-list"><li><span>01</span><div><h3>In-store kiosk</h3><p>Find preferred pieces in one store. Limited to physical shopping and dependent on retailer investment.</p></div></li><li><span>02</span><div><h3>Retailer product aggregation</h3><p>Bring products from mainstream retailers into one searchable place.</p></div></li><li><span>03</span><div><h3>In-store mobile app</h3><p>Kiosk-like help on a shopper’s phone, dependent on accurate inventory and product-location information.</p></div></li><li><span>04</span><div><h3>Retailer tagging system</h3><p>Make coverage attributes easier to find, but require adoption and consistent tagging across retailer systems.</p></div></li><li><span>05</span><div><h3>Combined shopping assistant</h3><p>Bring cross-retailer search and store discovery together so the system does more of the search work.</p></div></li></ol>
+          <p class="mf-scope">The retailer-data dependency remains unresolved. Choosing AI does not create access to missing product or branch information.</p>
+        </section>
+
+        <section class="mf-concept mf-section" id="mf-concept" aria-labelledby="mf-concept-title">
+          <p class="mf-eyebrow">10 / Proposed concept</p><h2 id="mf-concept-title">An agentic AI shopping assistant, with the shopper in control.</h2>
+          <div class="mf-concept-flow"><div><span>01</span><h3>Tell it what matters</h3><p>Set sleeve length, neckline, top length, back coverage, opacity, fit, fabric, style, size, budget, and location. Mark must-haves and flexible preferences. Budget stays strict unless the shopper opts into alternatives.</p></div><div><span>02</span><h3>Review explained matches</h3><p>See the source, price, supported details, uncertain details, and relevant return information. Best matches support all required preferences; possible matches explain compromises or show a “Needs checking” tag on the card.</p></div><div><span>03</span><h3>Decide what to do</h3><p>Save, compare, request a participating branch check, or continue to the retailer’s product page. The shopper makes the final decision.</p></div></div>
+          <div class="mf-concept-detail"><div><h3>For nearby stores</h3><p>A participating branch could respond <strong>available</strong>, <strong>unavailable</strong>, or <strong>unable to confirm</strong> to a product, size, and colour request. A pending state appears while waiting. “Available” means checked, not reserved.</p></div><div><h3>For online products</h3><p>The shopper can follow a clear source link to the retailer’s product page. Unverified details, including opacity, stay marked as uncertain; reviews are labelled as shopper reports.</p></div></div>
+        </section>
+
+        <section class="mf-outfits mf-section" aria-labelledby="mf-outfits-title">
+          <p class="mf-eyebrow">11 / Saved finds and outfit building</p><h2 id="mf-outfits-title">Dress-up games for real clothes.</h2><p class="mf-measure">The shopper can combine saved finds, a photo of something they already own, and other real products. They can explore optional layers, see relevant prices, and save an outfit. This helps with the mental work of imagining combinations.</p>
+          <div class="mf-outfit-diagram" role="img" aria-label="Saved finds, an optional owned garment, and real products come together in the proposed outfit builder"><span>Saved finds</span><b>+</b><span>Owned piece<br><small>optional photo</small></span><b>+</b><span>Other real products</span><b>→</b><strong>Saved outfit</strong></div>
+          <p class="mf-scope">Visual try-on, occasion planning, a full digital wardrobe, and tailoring requests are ideas to assess for scope, not established core features.</p>
+        </section>
+
+        <section class="mf-system mf-section" id="mf-system" aria-labelledby="mf-system-title">
+          <p class="mf-eyebrow">12 / How the proposed system would work</p><h2 id="mf-system-title">Useful answers depend on useful data.</h2>
+          <div class="mf-system-flow" role="img" aria-label="Shopper preferences lead to product search and assessment, then explained results, then shopper action"><span>Shopper preferences</span><b>→</b><span>Product search &amp; assessment</span><b>→</b><span>Explained results</span><b>→</b><span>Shopper action</span></div>
+          <div class="mf-system-sources"><div><h3>Information in</h3><p>Retailer product pages and available store data feed product details into search and assessment. Missing or unverified data remains visible. Saved items can feed the outfit builder.</p></div><div><h3>Request and response</h3><p>A physical-store availability request goes to participating store staff. Their response returns to the shopper as available, unavailable, or unable to confirm.</p></div></div>
+          <div class="mf-open-questions"><p>Can the concept access sufficiently useful product information from each retailer?</p><p>How can a participating branch respond reliably to availability requests?</p></div>
+        </section>
+
+        <section class="mf-ia mf-section" aria-labelledby="mf-ia-title">
+          <p class="mf-eyebrow">13 / Information architecture</p><h2 id="mf-ia-title">Three places to return to.</h2><p class="mf-measure">This is the proposed structure already mapped, not a tested interface.</p>
+          <div class="mf-ia-grid"><div><span>01</span><h3>Discover tops</h3><p>Preferences → store and online results → best and possible matches → product details → comparison or store availability request.</p></div><div><span>02</span><h3>Saved</h3><p>Liked products and outfits to return to.</p></div><div><span>03</span><h3>Outfit builder</h3><p>Combine selected finds and owned pieces.</p></div></div>
+          <p class="mf-caption">Product details may include coverage evidence, fit, fabric, price, size, source, return terms, and uncertainty tags where the source supports them. Screen visuals will be added as proposed designs when ready.</p>
+        </section>
+
+        <section class="mf-next mf-section" id="mf-next" aria-labelledby="mf-next-title">
+          <p class="mf-eyebrow">14 / What remains to validate</p><h2 id="mf-next-title">The concept gives me sharper questions to test.</h2>
+          <ul><li>Do shoppers understand must-have and flexible preferences and the match explanations?</li><li>Do uncertainty labels help shoppers make decisions they trust?</li><li>Is a store availability request useful to shoppers and feasible for branches?</li><li>Does the outfit builder help people decide what to keep, pair, or buy?</li></ul>
+          <p class="mf-current-state">Current outcome: a research-grounded concept, feature map, data-flow diagram, and information architecture.</p>
+        </section>
+      </article>
+      <nav class="mf-end" aria-label="Project navigation">
+        <p>next project</p>
+        <a class="mf-next-card" href="selective-mutism.html">
+          <img src="Assets/sm_cover.webp" alt="Selective Mutism project sketchbook with communication tool concepts" loading="lazy" width="1448" height="1086">
+          <span><small>UX Research &amp; Concept · In Progress</small><strong>Designing Low Pressure Communication for Children with Selective Mutism</strong><b>Read the case study&nbsp; →</b></span>
+        </a>
+        <a class="mf-all-projects" href="projects.html">View all projects&nbsp; →</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Designed by Khushna</p><div class="footer-contact"><a class="footer-icon" href="https://www.linkedin.com/in/khushna-kazi-005b32264/" target="_blank" rel="noopener noreferrer" aria-label="Khushna Kazi on LinkedIn"><img src="Assets/linkedin-icon.svg" alt="" width="24" height="24"></a><a class="footer-icon" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khushna.kazi%40gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Khushna on Gmail"><img src="Assets/gmail-icon.svg" alt="" width="24" height="24"></a></div></footer>
+    <!-- Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"190547916235429abcf3196cf8d368f0"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

@@ -1,5 +1,10 @@
 .page-sm { --sm-canvas: #fcf8f3; --sm-ink: #302e35; --sm-violet: #817bcd; --sm-violet-dark: #55509e; --sm-lavender: #ece9f7; --sm-lilac: #f3f0fa; --sm-peach: #fbe9df; --sm-pink: #fce1e2; --sm-blue: #e1edfb; --sm-green: #e9f1df; min-width: 0; background: var(--cream); color: var(--sm-ink); }
-.page-sm .site-header { background: var(--cream); }
+.page-sm .site-header { border-bottom-color: #ddd8ee; background: var(--sm-canvas); }
+.page-sm .site-header .nav-link { color: var(--sm-ink); }
+.page-sm .site-header .nav-link:hover { color: var(--sm-violet-dark); }
+.page-sm .site-header .contact-button { border-color: var(--sm-violet-dark); background: var(--sm-violet-dark); color: #fff; }
+.page-sm .mobile-menu-toggle { color: var(--sm-ink); }
+@media (max-width: 700px) { .page-sm .site-header.mobile-header .site-nav { border-color: #ddd8ee; background: var(--sm-canvas); } }
 .sm-case { width: min(1320px, calc(100% - 120px)); margin: 0 auto; background: var(--sm-canvas); }
 .sm-back { display: inline-block; margin: 26px 48px 0; color: var(--green); font-size: 13px; font-weight: 800; text-decoration: none; }
 .sm-back:hover, .sm-source a:hover { text-decoration: underline; }
@@ -107,16 +112,16 @@
 .sm-ui .sm-placeholder[aria-label="Placeholder for high-fidelity prototype"] { min-height: 560px; aspect-ratio: 3 / 2; }
 .sm-ui .sm-prototype-caption { margin: 32px 0 12px; color: var(--sm-violet-dark); font-size: 15px; font-weight: 700; line-height: 1.4; }
 .sm-ui .sm-ui-closing { max-width: 780px; margin: 45px 0 0; color: var(--sm-violet-dark); font-family: "Mouse Memoirs", "Nunito Sans", sans-serif; font-size: clamp(27px, 2.5vw, 36px); line-height: 1.18; }
-.sm-end { display: flex; flex-direction: column; align-items: center; gap: 25px; padding: 80px 20px 90px; background: var(--cream); text-align: center; }
-.sm-end > p { margin: 0; color: var(--green-light); font-family: var(--display-font); font-size: 14px; }
-.sm-next-card { display: grid; grid-template-columns: 240px 1fr; width: min(680px, 100%); overflow: hidden; border: 1px solid var(--green-pale); border-radius: 16px; background: #fff; color: var(--sm-ink); text-align: left; text-decoration: none; }
+.sm-end { display: flex; flex-direction: column; align-items: center; gap: 25px; padding: 80px 20px 90px; border-top: 1px solid #ddd8ee; background: var(--sm-canvas); text-align: center; }
+.sm-end > p { margin: 0; color: var(--sm-violet-dark); font-family: "Mouse Memoirs", "Nunito Sans", sans-serif; font-size: 24px; }
+.sm-next-card { display: grid; grid-template-columns: 240px minmax(0, 1fr); width: min(680px, 100%); overflow: hidden; border: 1px solid #cbc6ee; border-radius: 10px; background: var(--sm-lilac); color: var(--sm-ink); text-align: left; text-decoration: none; }
 .sm-next-card > img { display: block; width: 100%; height: 100%; min-height: 155px; object-fit: cover; }
 .sm-next-card > span { display: flex; flex-direction: column; justify-content: center; gap: 11px; padding: 22px; }
-.sm-next-card small { color: var(--pink); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.sm-next-card strong { font-size: 19px; line-height: 1.22; }
-.sm-next-card b, .sm-all-projects { color: var(--green); font-size: 14px; font-weight: 800; text-decoration: none; }
+.sm-next-card small { color: var(--sm-violet-dark); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.sm-next-card strong { color: var(--sm-violet-dark); font-family: "Mouse Memoirs", "Nunito Sans", sans-serif; font-size: 30px; font-weight: 400; line-height: 1.05; }
+.sm-next-card b, .sm-all-projects { color: var(--sm-violet-dark); font-size: 14px; font-weight: 800; text-decoration: none; }
 .sm-all-projects { font-size: 19px; }
-.sm-next-card:hover, .sm-next-card:focus-visible { box-shadow: 0 12px 28px rgba(69, 98, 66, .13); }
+.sm-next-card:hover, .sm-next-card:focus-visible { box-shadow: 0 12px 28px rgba(85, 80, 158, .15); }
 .sm-all-projects:hover { text-decoration: underline; }
 @media (max-width: 1100px) { .sm-case { width: min(1320px, calc(100% - 40px)); } .sm-section { padding: 70px 45px; } }
 
@@ -421,5 +426,5 @@
   .sm-concept-grid { grid-template-columns: minmax(0, 1fr); }
   .sm-next-card { grid-template-columns: 105px minmax(0, 1fr); }
   .sm-next-card > span { padding: 14px; }
-  .sm-next-card strong { font-size: 15px; }
+  .sm-next-card strong { font-size: 23px; }
 }
