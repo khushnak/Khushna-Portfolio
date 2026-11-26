@@ -595,17 +595,17 @@ a { color: inherit; }
   .featured-projects { min-height: 0; padding: 10px 20px 78px; }
   .mobile-projects-title { position: static; width: auto; height: auto; margin: 0 auto 26px; overflow: visible; clip: auto; color: var(--pink); font-family: var(--display-font); font-size: clamp(33px, 9vw, 42px); font-style: italic; font-weight: 400; line-height: 1.2; white-space: normal; }
   .book-hint, .book-stage, .feature-star { display: none !important; }
-  .featured-mobile { display: grid; gap: 24px; max-width: 520px; margin: 0 auto; text-align: left; }
-  .featured-mobile a { display: block; overflow: hidden; border: 1px solid rgba(69, 98, 66, .18); border-radius: 14px; background: #fff; text-decoration: none; box-shadow: 0 7px 20px rgba(43, 48, 34, .08); }
-  .featured-mobile img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-  .featured-mobile span { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 15px 16px; }
-  .featured-mobile strong { font-size: clamp(15px, 4.1vw, 18px); line-height: 1.2; }
-  .featured-mobile b { color: var(--green); font-size: clamp(10px, 2.8vw, 12px); line-height: 1.2; white-space: nowrap; }
+  .featured-mobile { display: grid; gap: 42px; max-width: 520px; margin: 0 auto; text-align: left; }
+  .featured-mobile .project-card { display: block; padding-bottom: 40px; }
+  .featured-mobile .project-card-body { padding: 20px 2px 0; }
+  .featured-mobile .project-card h3 { margin: 0 0 15px; font-size: clamp(22px, 6vw, 27px); line-height: 1.28; font-weight: 800; }
+  .featured-mobile .project-card-summary { margin-bottom: 24px; }
   .view-projects { margin-top: 30px; font-size: 21px; }
   .about { min-height: 0; grid-template-columns: minmax(0, 1fr); padding: 42px 24px 56px; }
   .about-copy { max-width: 580px; padding-top: 0; }
   .about-copy h2 { font-size: 43px; text-align: center; }
-  .about-art { width: min(calc(100% + 48px), 640px); max-width: none; justify-self: center; margin: 22px 0 0; }
+  .about-copy p { font-size: 15px; line-height: 1.65; }
+  .about-art { width: min(calc(100% + 80px), 680px); max-width: none; justify-self: center; margin: 22px 0 0; }
   .about-star { display: none; }
   #about { scroll-margin-top: 82px; }
   .closing { min-height: 0; padding: 65px 24px 80px; }
