@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261126-1">
-    <script src="script.js?v=20261125-2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261126-2">
+    <script src="script.js?v=20261126-1" defer></script>
   </head>
   <body class="page-home">
     <header class="site-header mobile-header">
@@ -55,6 +55,8 @@
           </div>
           <img class="frame-art" src="Assets/Frame.png?v=20261125-2" alt="">
           <img class="frame-art frame-jam-front" src="Assets/Frame.png?v=20261125-2" alt="" aria-hidden="true">
+          <button class="frame-icon-button frame-heart-button" type="button" data-meme="Assets/like meme.jpg" data-meme-alt="A yellow character saying Arigathanks gozaimuch" aria-label="Open heart meme"></button>
+          <button class="frame-icon-button frame-delete-button" type="button" data-meme="Assets/delete meme.jpg" data-meme-alt="A collage of Salman Khan reaction faces" aria-label="Open delete meme"></button>
           <svg class="role-doodle bow-doodle is-active" viewBox="0 0 120 145" aria-hidden="true">
             <path class="ink" stroke-width="4" d="M58 48 C42 26 21 25 17 37 C10 53 30 66 56 53 M64 47 C84 26 102 30 103 43 C105 58 85 65 65 54"/>
             <path class="ink" stroke-width="3.4" d="M55 55 C43 74 25 91 28 111 C30 119 37 121 42 114 M65 55 C75 73 91 91 87 107 C84 115 79 114 77 109"/>
@@ -74,6 +76,11 @@
           </svg>
         </div>
       </section>
+
+      <dialog class="hero-meme-dialog" id="hero-meme-dialog" aria-label="Meme popup">
+        <button class="hero-meme-close" type="button" aria-label="Close meme popup">×</button>
+        <img src="" alt="">
+      </dialog>
 
       <section class="featured-projects reveal-scope" id="featured-projects" data-reveal aria-labelledby="featured-title">
         <h2 class="mobile-projects-title" id="featured-title">My Projects</h2>
@@ -163,7 +170,7 @@
           <p>Open to opportunities and collaborations</p>
           <div class="closing-actions">
             <a class="button button-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=khushna.kazi%40gmail.com" target="_blank" rel="noopener noreferrer"><img src="Assets/envelope.webp" alt="" width="480" height="323"> Say Hello</a>
-            <a class="button button-outline" href="https://drive.google.com/file/d/14bXL6bPc_dgpRuG7koRKixEXpUA413PN/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
+            <a class="button button-outline" href="https://drive.google.com/file/d/1aumWL8Bh-cjOA6X9JFRS7vErhlf1nD0X/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
           </div>
         </div>
       </section>

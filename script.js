@@ -1,6 +1,18 @@
 const revealScopes = document.querySelectorAll("[data-reveal]");
 
 const heroVisual = document.querySelector(".page-home .hero-visual");
+const heroMemeDialog = document.getElementById("hero-meme-dialog");
+if (heroVisual && heroMemeDialog) {
+  const memeImage = heroMemeDialog.querySelector("img");
+  heroVisual.querySelectorAll("[data-meme]").forEach((button) => {
+    button.addEventListener("click", () => {
+      memeImage.src = button.dataset.meme;
+      memeImage.alt = button.dataset.memeAlt;
+      heroMemeDialog.showModal();
+    });
+  });
+  heroMemeDialog.querySelector(".hero-meme-close").addEventListener("click", () => heroMemeDialog.close());
+}
 if (heroVisual && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const roles = ["UX Designer", "Creative", "Cutie"];
   const reactions = [
